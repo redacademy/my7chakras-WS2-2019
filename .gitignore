@@ -1,0 +1,46 @@
+# COMMUNITY PROJECT GITIGNORE #
+
+# Ignore OS files #
+# =============== #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+# Ignore logs and databases #
+# ========================= #
+*.log
+*.sql
+error_log
+access_log
+
+# Ignore everything in "wp-content" except the "plugins" and "themes" directories. #
+# ================================================================================ #
+/*
+!.gitignore
+!plugins/
+!themes/
+!README.md
+
+# Ignore everything in "plugins" except certain plugins. #
+# ========================================================== #
+plugins/*
+!plugins/my7chakras/
+
+# Ignore everything in "themes" except the active theme. #
+# ====================================================== #
+themes/*
+!themes/my7chakras/
+
+# Ignore npm packages #
+# =================== #
+themes/my7chakras/node_modules/*
+
+# Ignore build files #
+# ================== #
+themes/my7chakras/gulpfile.js
+themes/my7chakras/build/*
