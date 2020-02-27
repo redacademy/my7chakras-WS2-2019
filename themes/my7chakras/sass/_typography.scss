@@ -9,14 +9,42 @@ select,
 textarea {
 	color: $color__text-main;
 	font-family: $font-main;
-	@include font-size(1);
 	line-height: $font__line-height-body;
+	font-size: $text-size--pc;
+	@include sp{
+		font-size: $text-size--sp;
+	}
 }
 
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+}
+
+h1 {
+	font-size: $heading-size--pc;
+	font-family: $font-heading;
+	margin: 0.67em 0;
+	@include sp{
+		font-size: $heading-size--sp;
+	}
+}
+
+h2{
+	font-size: $title-size--pc;
+	font-family: $font-heading;
+	font-weight: normal;
+	@include sp{
+		font-size: $title-size--sp;
+	}
+}
+
+h3{
+	font-size: $subtitle-size--pc;
+	@include sp{
+		font-size: $subtitle-size--sp;
+	}
 }
 
 /* Copy */
