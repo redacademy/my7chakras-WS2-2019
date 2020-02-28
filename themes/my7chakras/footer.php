@@ -11,8 +11,29 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
 					<div> Subscribe to Newsletter</div>
+
+					<ul>
+
+					 <li><a href="">Home</a></li>
+					 <li><a href="">Podcast</a></li>
+					 <li><a href="">Action Tribe Energy Circle</a></li>
+					 <li><a href="">Contact</a></li>
+					
+					</ul>
+
+					<div>
+
+					<?php
+                    dynamic_sidebar( 'sidebar-social' );
+                    ?> 
+
+					</div>
+
+					<div>
+						<p>Copyright 2020</p>
+						<p>Privacy Policy</p>
+					</div>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
