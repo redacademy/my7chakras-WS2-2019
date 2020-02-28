@@ -43,3 +43,18 @@ $pc: 980px;
     @content;
   }
 }
+
+
+@mixin box-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+@mixin box-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
