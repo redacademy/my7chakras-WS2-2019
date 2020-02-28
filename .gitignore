@@ -30,6 +30,11 @@ access_log
 # ========================================================== #
 plugins/*
 !plugins/my7chakras/
+!plugins/business-info/
+!plugins/contact-form-7
+
+
+
 
 # Ignore everything in "themes" except the active theme. #
 # ====================================================== #
