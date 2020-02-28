@@ -13,7 +13,12 @@
 @mixin content-wrapper{
 	width: 1120px;
     margin-right: auto;
-	margin-left: auto;
+  margin-left: auto;
+  @include spandtb{
+    width: 90vw;
+    margin-right: auto;
+  margin-left: auto;
+  }
 }
 
 $sp: 415px; 
@@ -40,6 +45,12 @@ $pc: 980px;
 
 @mixin pcandtb{
   @media (min-width: $tb) {
+    @content;
+  }
+}
+
+@mixin spandtb{
+  @media (max-width: $tb) {
     @content;
   }
 }

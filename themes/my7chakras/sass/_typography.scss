@@ -24,16 +24,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: $heading-size--pc;
-	font-family: $font-heading;
+	font-family: $font-main;
+	font-weight: normal;
 	margin: 0.67em 0;
+	line-height: 65px;
 	@include sp{
 		font-size: $heading-size--sp;
+		line-height: 33px;
 	}
 }
 
 h2{
 	font-size: $title-size--pc;
-	font-family: $font-heading;
+	font-family: $font-main;
 	font-weight: normal;
 	@include sp{
 		font-size: $title-size--sp;
