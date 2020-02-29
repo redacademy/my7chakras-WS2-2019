@@ -13,7 +13,12 @@
 @mixin content-wrapper{
 	width: 1120px;
     margin-right: auto;
-	margin-left: auto;
+  margin-left: auto;
+  @include spandtb{
+    width: 90vw;
+    margin-right: auto;
+  margin-left: auto;
+  }
 }
 
 $sp: 415px; 
@@ -47,6 +52,11 @@ $pc: 980px;
 @mixin reset {
   padding: 0;
   margin: 0;
+}
+@mixin spandtb{
+  @media (max-width: $tb) {
+    @content;
+  }
 }
 
 @mixin box-column {
