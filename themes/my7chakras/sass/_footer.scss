@@ -1,10 +1,151 @@
 
 footer{
-
+@include color-gradient;
+height: auto;
 width: 100%;
+color: $white !important;
+padding-bottom: 5%;
+height: auto;
+font-family: $font-main !important;
+
+@include pcandtb{
+    padding-bottom: 1.5%;
+  
+}
     ul{
+        @include reset;
         list-style: none;
+        @include box-row;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        justify-content: space-evenly;
+        li{
+            font-size: .75rem;
+            @include pcandtb{
+                font-size: 1rem;
+              
+            }
+        }
+        @include pcandtb{
+            margin-top: 2%;
+            margin-bottom: 2%;
+          
+        }
+
     }
+    h3{
+        font-family: $font-heading;
+        font-weight: lighter;
+        line-height: 20px;
+        @include reset;
+        margin-top: 5%;
+        margin-bottom: 2%;
+        @include pcandtb{
+            display: none;
+        }
+    }
+    h4{
+        display: none;
+        @include pcandtb{
+            display: unset;
+            font-size: 1.75rem;
+            letter-spacing: 0.35px;
+            font-weight: 200;
+            @include reset;
+            margin: 1% 0%;
+        }
+    }
+
+   .ajax-loader{
+       display: none !important;
+   }
+
+   h2{
+    font-family: $font-main !important;
+       display: none;
+       @include pcandtb{
+        display: unset;
+        font-size: 2.7rem;
+        @include reset;
+        margin-top: 3%;
+    }
+   }
+
+   .footer-titles{
+    @include pcandtb{
+        display: flex;
+        flex-direction: column;
+    }
+   }
+
+   .subscription{
+    @include pcandtb{
+
+    }
+   }
     
 }
+
+.subscription{
+    p{
+        @include box-row;
+        justify-content: center;
+    }
+}
+
+.site-info{
+    @include box-column;
+    justify-content: space-around;
+    text-align: center;
+    
+    p{
+        padding: unset;
+        margin: unset;
+    }
+    a{
+        color: $white !important;
+
+    }
+
+    aside{
+        @include reset;
+        margin-bottom: 5%;
+        @include pcandtb{
+            margin-bottom: .5%;
+          
+        }
+    }
+}
+
+
+.box-column {
+    @include box-column;
+ 
+  }
+  
+  .box-row {
+    @include box-row;
+    width: 51%;
+    margin: auto;
+    @include pcandtb{
+        width: 21%;
+      
+    }
+    
+  }
+  
+.widget-title{
+    display: none;
+    
+}
+
+.copy-rights{
+font-size: .6rem;
+@include pcandtb{
+    font-size: 1rem;
+  
+}
+
+}
+
 
