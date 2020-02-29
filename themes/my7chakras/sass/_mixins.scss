@@ -49,6 +49,10 @@ $pc: 980px;
   }
 }
 
+@mixin reset {
+  padding: 0;
+  margin: 0;
+}
 @mixin spandtb{
   @media (max-width: $tb) {
     @content;
@@ -63,8 +67,14 @@ $pc: 980px;
 
 @mixin box-row {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
+
+@mixin color-gradient {
+  background-color: #2f41a4;
+background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(122deg, #2f41a4 -58%, #323184 -18%, #4d449c 14%, #915990 46%, #ac5f80 79%, #ac5d5b 113%);
+
+}
 
