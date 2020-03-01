@@ -45,7 +45,7 @@ get_header(); ?>
                                     <?php red_starter_posted_on(); ?>
                                 </div>
                                 <?php the_title(sprintf('<a href="%s" rel="bookmark" class="blog__postTitle"><h3>', esc_url(get_permalink())), '</h3></a>'); ?>
-
+                                <p class="blog__postTag"><?php the_tags('', ' | '); ?></p>
                                 <div class="entry-content">
                                     <?php the_excerpt(); ?>
                                     <a href="<?php the_permalink(); ?>" class="blog__postBtn">See more</a>
