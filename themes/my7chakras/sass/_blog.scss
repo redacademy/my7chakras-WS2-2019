@@ -1,0 +1,41 @@
+.blog{
+    &__lists{
+
+    }
+    &__post{
+        border-radius: 10px;
+        box-shadow: 0 1px 10px #b1b1b1;
+        display: flex;
+        @include sp{
+            flex-direction: column;
+        }
+        &Img{
+  position:relative;
+  width:400px;
+  height:300px;
+  overflow:hidden;
+
+img {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border-radius: 10px;
+    @include sp{
+        width: 100%;
+    }
+            }
+        }
+        &Title{
+            h3{
+                color: $text-color;
+            }
+        }
+        &Content{
+            padding: 10px;
+        }
+        &{
+            padding: 10px;
+        }
+    }
+}

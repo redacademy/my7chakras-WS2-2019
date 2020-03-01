@@ -49,6 +49,7 @@ h2{
 
 h3{
 	font-size: $subtitle-size--pc;
+	font-weight: normal;
 	@include sp{
 		font-size: $subtitle-size--sp;
 	}

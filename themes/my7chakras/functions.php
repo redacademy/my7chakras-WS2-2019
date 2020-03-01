@@ -123,6 +123,6 @@ require get_template_directory() . '/inc/extras.php';
 // set exerpt length
 function my_excerpt_length($length)
 {
-	return 40;
+	return 25;
 }
 add_filter('excerpt_length', 'my_excerpt_length');
