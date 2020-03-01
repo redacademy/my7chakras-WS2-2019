@@ -1,25 +1,39 @@
-<?php
+<div class="about-page-container about-page-header">
+	<?php
+	/**
+	 * The template for displaying all pages.
+	 *
+	 * @package RED_Starter_Theme
+	 */
 
-/**
- * The template for displaying all pages.
- *
- * @package RED_Starter_Theme
- */
+	get_header(); ?>
+	</div>
+<div class="about-container">
+		<div id="primary" class="content-area about">
+			<main id="main" class="site-main" role="main">
+				<?php while ( have_posts() ) : the_post(); ?>
 
-get_header(); ?>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <?php while (have_posts()) : the_post(); ?>
+                <div class="entry-content">
+                    <?php the_content(); ?>
+                        <?php
+                            wp_link_pages( array(
+                                'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+                                'after'  => '</div>',
+                            ) );
+                        ?>
+                </div><!-- .entry-content -->
+            </article><!-- #post-## -->
+				
+					
+					<?php endwhile; // End of the loop. ?>
 
-            <?php get_template_part('template-parts/content', 'page'); ?>
 
-        <?php endwhile; // End of the loop. 
-        ?>
 
-    </main><!-- #main -->
-</div><!-- #primary -->
+			</main><!-- #main -->
+		</div><!-- #primary -->
+</div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
