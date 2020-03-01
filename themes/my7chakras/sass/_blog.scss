@@ -1,0 +1,52 @@
+.blog{
+    &__lists{
+
+    }
+    &__post{
+        border-radius: 10px;
+        box-shadow: 0 1px 10px #b1b1b1;
+        display: flex;
+        justify-content: space-between;
+        @include pc{
+        height: 235px;
+        }
+        @include spandtb{
+            flex-direction: column;
+        }
+        &Img{
+  position:relative;
+  width:270px;
+  height:235px;
+  overflow:hidden;
+  @include spandtb{
+      width: 100%;
+      height: 215px;
+  }
+img {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    @include sp{
+        width: 100%;
+        }
+            }
+        }
+        &Title{
+            h3{
+                color: $text-color;
+            }
+        }
+        &Content{
+            width: 70%;
+            @include spandtb{
+                padding: 10px;
+                width: 100%;
+            }
+        }
+    }
+}
