@@ -63,4 +63,29 @@
             width: 100%;
         }
     }
+    &__lists{
+
+    }
+    &__post{
+        border-radius: 15px;
+        box-shadow: 0 1px 10px #b1b1b1;
+        display: flex;
+        @include sp{
+            flex-direction: column;
+        }
+        &Img{
+            img{
+                width: 100%;
+                border-radius: 15px;
+            }
+        }
+        &Title{
+            h3{
+                color: $text-color;
+            }
+        }
+        &Content{
+            padding: 10px;
+        }
+    }
 }
