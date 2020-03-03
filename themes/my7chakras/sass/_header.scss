@@ -1,0 +1,96 @@
+
+.site-header{
+    width: 90%;
+    margin: auto;
+    @include box-row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2%;
+
+    .main-navigation {
+        width: unset;
+        @include box-row;
+        justify-content: flex-end;
+        width: 15%;
+        @include pcandtb{
+            order: 2;
+            width: auto;
+        }
+    }
+
+    // menu classes
+
+   .menu-menu-1-container{
+
+        ul{
+            @include box-column;
+            list-style: none;
+            margin: 0%;
+            padding: 0%;
+            li{
+                margin: 0 3% ;
+                border-radius: 5px;
+                height: 73px;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                align-items: center;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.15px;
+                padding: 3%;
+                @include pcandtb{
+                    @include reset; 
+                    box-shadow: unset;
+                }
+            }
+            @include pcandtb{
+                @include box-row; 
+            }
+
+        }
+    }
+
+    .logo-header{
+        display: flex;
+        width: 59px;
+        height: 32px;
+        img{
+            width: 100%;
+        }
+        @include pcandtb{
+            width: 119px;
+            height: 65px;
+        }
+    }
+
+
+    button{
+        width: 100%;
+        @include reset;
+        background: none;
+        border: none;
+        height: auto;
+        margin: 0 3%;
+        
+        @include pcandtb{
+            width: 15.9px;   
+        }
+        img{
+            width: 15.9px;
+            height: 15.9px;
+        }
+      
+    }
+}
+
+.main-manu-content{
+    
+    display: none;
+    width: 100%;
+
+    @include pcandtb{
+        display: unset;
+        width: 80%;
+    }
+
+
+}

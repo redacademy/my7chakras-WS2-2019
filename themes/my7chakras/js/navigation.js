@@ -21,7 +21,7 @@
 
   // Hide menu toggle button if menu is empty and return early.
   if ('undefined' === typeof menu) {
-    button.style.display = 'none';
+   
     return;
   }
 
