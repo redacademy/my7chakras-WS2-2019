@@ -62,7 +62,15 @@ get_header(); ?>
                         </article>
 
                     <?php endwhile; ?>
+
                 </section>
+                <div class="blog__pageNavi">
+                    <?php if (function_exists('wp_pagenavi')) {
+                        wp_pagenavi();
+                    } ?>
+                    <span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pagenation_slash.png" alt=""><?php max_show_page_number(''); ?></span>
+                </div>
+
             <?php else : ?>
 
                 <?php get_template_part('template-parts/content', 'none'); ?>

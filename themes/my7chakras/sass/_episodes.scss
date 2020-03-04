@@ -12,6 +12,9 @@
             position: absolute;
             right: 0;
             bottom: 0;
+            @include spandtb{
+                display: none;
+            }
         }
     }
     &__categories{
@@ -22,14 +25,15 @@
         }
     }
     &__category{
-        width: 25%;
-        height: 105px;
+        width: 20%;
+        height: 122px;
         background-position: center; 
         background-repeat: no-repeat; 
         background-size: contain; 
         text-align: center;
         position: relative;
         @include sp{
+            height: 105px;
             width: 48%;
         }
         &:first-of-type{
