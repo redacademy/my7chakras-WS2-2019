@@ -2,6 +2,18 @@
     &__wrapper{
         @include content-wrapper;
     }
+    &__heading{
+        position: relative;
+        margin-bottom: 40px;
+        @include pc{
+            height: 350px;
+        }
+        img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
     &__categories{
         display: flex;
         justify-content: space-between;
@@ -82,6 +94,7 @@
         &Title{
             h3{
                 color: $text-color;
+                line-height: 1;
             }
         }
         &Content{

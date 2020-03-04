@@ -1,51 +1,112 @@
 .blog{
-    &__lists{
-
-    }
     &__post{
         border-radius: 10px;
         box-shadow: 0 1px 10px #b1b1b1;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 30px;
+        background: #F7F7F7;
         @include pc{
         height: 235px;
+        justify-content: flex-start;
         }
         @include spandtb{
+            margin-bottom: 40px;
             flex-direction: column;
         }
         &Img{
-  position:relative;
-  width:270px;
-  height:235px;
-  overflow:hidden;
-  @include spandtb{
-      width: 100%;
-      height: 215px;
-  }
-img {
+        position:relative;
+        width:270px;
+        height:236px;
+        overflow:hidden;
+        @include spandtb{
+        width: 100%;
+        height: 215px;
+    }
+    img {
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     object-fit: cover;
     width: 100%;
     height: 100%;
+    @include pc{
+        border-radius: 10px;
+    }
     @include sp{
         width: 100%;
         }
             }
         }
+        &Num{
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            z-index: 999;
+            color: $purple;
+            display: inline-block;
+            padding: 5px 10px 3px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+        }
+        &Day{
+            margin-top: 10px;
+            font-size: 15px;
+            @include pc{
+                margin-top: 20px;
+            }
+        }
+        &Tag{
+            color: $pink;
+            a{
+                color: $pink;
+            }
+        }
         &Title{
             h3{
                 color: $text-color;
+                margin-top: 10px;
+                line-height: 1;
             }
         }
         &Content{
             width: 70%;
+            @include pc{
+                margin-left: 40px;
+            }
             @include spandtb{
-                padding: 10px;
+                padding: 10px 10px 20px;
                 width: 100%;
+            }
+        }
+        &Excerpt{
+            margin-bottom: 40px;
+            @include pc{
+                margin-bottom: 20px;
+            }
+        }
+        &Btn{
+            float: right;
+            color: $text-color!important;
+            padding-right: 15px;
+            position: relative;
+            font-size: 18px;
+            &:after{
+                content: '';
+                display: inline-block;
+                width: 6px;
+                height: 11px;
+                position: absolute;
+                right: -3px;
+                top: 50%;
+                transform:translate(0,-50%);
+                background-image: url(../../assets/images/btn_arrow.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                vertical-align: middle;
             }
         }
     }

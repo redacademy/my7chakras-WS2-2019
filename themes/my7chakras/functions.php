@@ -123,6 +123,23 @@ require get_template_directory() . '/inc/extras.php';
 // set exerpt length
 function my_excerpt_length($length)
 {
-	return 25;
+	return 12;
 }
 add_filter('excerpt_length', 'my_excerpt_length');
+
+
+// set post number
+function getPostThNumber()
+{
+	global $wpdb, $post;
+
+	$number = $wpdb->get_var("
+	  SELECT COUNT(*)
+	  FROM $wpdb->posts
+	  WHERE post_status = 'publish'
+	  AND post_type = 'post'
+	  AND post_date <= '$post->post_date'
+	");
+
+	return $number;
+}
