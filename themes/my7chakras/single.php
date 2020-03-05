@@ -23,10 +23,10 @@ get_header(); ?>
 			?>
 
 			<article id="post-<?php the_ID(); ?>" class="post">
-				<div class="post__Wrapper">
-					<p>Episode <?php echo getPostThNumber() ?></p>
+				<div class="post__wrapper">
+					<p class="post__num">Episode <?php echo getPostThNumber() ?></p>
 					<?php echo get_the_date('F d'); ?>
-					<?php the_title('<h3 class="post__Title">', '</h3>'); ?>
+					<?php the_title('<h3 class="post__title">', '</h3>'); ?>
 					<p class="post__tag">
 						<?php the_tags('', ' | '); ?>
 					</p>
@@ -35,7 +35,9 @@ get_header(); ?>
 							<?php the_post_thumbnail('large'); ?>
 						<?php endif; ?>
 					</div>
-					<?php the_content(); ?>
+					<div class="episode__heading">
+						<?php the_content(); ?>
+					</div>
 				</div>
 				<div class="post__text">
 					<p class="post__white post__white--top"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/white_top.svg" alt=""></p>
@@ -56,27 +58,15 @@ get_header(); ?>
 				</div>
 				<?php
 				wp_link_pages(array(
-					'before' => '<div class="page-links">' . esc_html('Pages:'),
+					'before' => '<div class="page-links" >' . esc_html('Pages:'),
 					'after'  => '</div>',
 				));
 				?>
-
-
-
 				<?php the_post_navigation(); ?>
-
-				<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if (comments_open() || get_comments_number()) :
-					comments_template();
-				endif;
-				?>
-
 			<?php endwhile; // End of the loop. 
 			?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
