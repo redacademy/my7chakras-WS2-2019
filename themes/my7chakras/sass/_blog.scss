@@ -132,52 +132,6 @@
             }
         }
     }
-    &__post{
-        &Wrapper{
-            @include content-wrapper;
-        }
-        &Thumbnail{
-            position:relative;
-            width:100%;
-            height:180px;
-            overflow:hidden;
-            img{
-                width: 100%;
-                border-radius: 10px;
-                @include spandtb{
-                    position:absolute;
-                    top:50%;
-                    left:50%;
-                    transform:translate(-50%,-50%);
-                    object-fit: cover;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-        &Text{
-            background-color: #393771;
-            background-image:  linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(160deg, #393771 -38%, #3A3873 5%, #634B7B 33%, #915990 60%, #815373 79%, #8B5565 113%);
-            color: #ffffff;
-            position: relative;
-            padding: 50px 0;
-        }
-        &White{
-            margin: 0;
-            position: absolute;
-            vertical-align: bottom;
-            img{
-                width: 100%;
-                display: block;
-            }
-            &--top{
-                top: 0;
-            }
-            &--bottom{
-                bottom: 0;
-            }
-        }
-        }
     }
 
     .post{
