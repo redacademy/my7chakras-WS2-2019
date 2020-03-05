@@ -84,7 +84,7 @@
     }
     &__post{
         border-radius: 15px;
-        box-shadow: 0 1px 10px #b1b1b1;
+        box-shadow: $shadow;
         display: flex;
         @include sp{
             flex-direction: column;
@@ -109,6 +109,7 @@
 
 .episode{
     &__question{
+        @include content-wrapper;
         ol{
             margin-left: 0;
             padding-left: 0;
@@ -117,6 +118,11 @@
         }
         li{
             margin-top: 10px;
+        }
+    }
+    .question{
+        @include spandtb{
+             
         }
     }
 }

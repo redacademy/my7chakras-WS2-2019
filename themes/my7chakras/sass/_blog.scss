@@ -1,7 +1,7 @@
 .blog{
     &__post{
         border-radius: 10px;
-        box-shadow: 0 1px 10px #b1b1b1;
+        box-shadow: $shadow;
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
@@ -124,7 +124,7 @@
             width: 46px;
             background: transparent;
             border: none;
-            box-shadow: 0 1px 10px #b1b1b1;
+            box-shadow: $shadow;
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -156,10 +156,74 @@
             }
         }
         &Text{
-            background-color: #2f41a4;
-            background-image: linear-gradient(90deg,rgba(0,0,0,.2),rgba(0,0,0,.2)),linear-gradient(122deg,#2f41a4 -58%,#323184 -18%,#4d449c 14%,#915990 46%,#ac5f80 79%,#ac5d5b 113%);
+            background-color: #393771;
+            background-image:  linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(160deg, #393771 -38%, #3A3873 5%, #634B7B 33%, #915990 60%, #815373 79%, #8B5565 113%);
             color: #ffffff;
+            position: relative;
+            padding: 50px 0;
+        }
+        &White{
+            margin: 0;
+            position: absolute;
+            vertical-align: bottom;
+            img{
+                width: 100%;
+                display: block;
+            }
+            &--top{
+                top: 0;
+            }
+            &--bottom{
+                bottom: 0;
+            }
         }
         }
     }
 
+    .post{
+            &__wrapper{
+                @include content-wrapper;
+            }
+            &__thumbnail{
+                position:relative;
+                width:100%;
+                height:180px;
+                overflow:hidden;
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                    @include spandtb{
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%,-50%);
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            &__text{
+                background-color: #393771;
+                background-image:  linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(160deg, #393771 -38%, #3A3873 5%, #634B7B 33%, #915990 60%, #815373 79%, #8B5565 113%);
+                color: #ffffff;
+                position: relative;
+                padding: 50px 0 80px;
+            }
+            &__white{
+                margin: 0;
+                position: absolute;
+                vertical-align: bottom;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+                &--top{
+                    width: 103%;
+                    top: 0;
+                }
+                &--bottom{
+                    bottom: -2px;
+                }
+            }
+    }
