@@ -73,9 +73,15 @@ input[type="search"] {
 	}
 }
 
-
-
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+.hide{
+	display: none;
+}
+
+.show{
+	display: inline;
 }
