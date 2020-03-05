@@ -28,24 +28,33 @@
 					<img src= "<?php echo get_template_directory_uri();?>/assets/logo/logo.svg" alt="logo">				
 				</a>
 
-
-
-
 	
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="search-toggle" aria-controls="primary-menu" aria-expanded="false">
 						<img src= "<?php echo get_template_directory_uri();?>/assets/logo/search.svg" alt="logo">				
+						</button>
+						
+				
+				
+
+					<button class="menu-toggle">
+						<img class="burger-icon" src= "<?php echo get_template_directory_uri();?>/assets/logo/burger.svg" alt="logo">
+						<img class="close-icon hide" src= "<?php echo get_template_directory_uri();?>/assets/logo/close-icon.svg" alt="logo">
 					</button>
 
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-						<img src= "<?php echo get_template_directory_uri();?>/assets/logo/burger.svg" alt="logo">				
-					</button>
+
 				</nav><!-- #site-navigation -->
 
-
+				
 				<div class="main-manu-content">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</div>
+
+
+				<div class="form-container">
+					<?php get_search_form(); ?>
+				</div>
+
 
 			</header><!-- #masthead -->
 
