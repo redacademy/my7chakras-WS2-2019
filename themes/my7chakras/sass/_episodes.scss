@@ -106,3 +106,18 @@
         }
     }
 }
+
+.episode{
+    &__question{
+        ol{
+            margin-left: 0;
+            padding-left: 0;
+            @include spandtb{
+            list-style-type: none;
+        }
+        li{
+            margin-top: 10px;
+        }
+    }
+}
+}
