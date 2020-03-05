@@ -100,9 +100,9 @@ function red_starter_scripts()
 {
 	wp_enqueue_style('red-starter-style', get_stylesheet_uri());
 
-	wp_enqueue_script( 'red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'index', get_template_directory_uri() . '/build/js/index.min.js', array(), '20151215', true );
+	wp_enqueue_script('red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
+	wp_enqueue_script('red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
+	wp_enqueue_script('index', get_template_directory_uri() . '/build/js/index.min.js', array(), '20151215', true);
 
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -122,7 +122,9 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
-// set exerpt length
+/**
+ * Set exerpt length
+ */
 function my_excerpt_length($length)
 {
 	return 12;
@@ -130,7 +132,9 @@ function my_excerpt_length($length)
 add_filter('excerpt_length', 'my_excerpt_length');
 
 
-// set post number
+/**
+ * Set post number
+ */
 function getPostThNumber()
 {
 	global $wpdb, $post;
@@ -144,4 +148,16 @@ function getPostThNumber()
 	");
 
 	return $number;
+}
+
+/**
+ * Show max page number
+ */
+
+function max_show_page_number()
+{
+	global $wp_query;
+
+	$max_page = $wp_query->max_num_pages;
+	echo $max_page;
 }
