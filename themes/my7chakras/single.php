@@ -35,6 +35,27 @@ get_header(); ?>
 							<?php the_post_thumbnail('large'); ?>
 						<?php endif; ?>
 					</div>
+					<div class="episode__btn">
+						<div class="episode__btnPodcast">
+							<h5>Stream Podcast</h5>
+							<div class="episode__">
+
+							</div>
+						</div>
+						<div class="episode__btnApp">
+							<h5>Listen On:</h5>
+							<div>
+								<a href="">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/podcast.png" alt="">
+									<p>Apple<br>Podcasts</p>
+								</a>
+								<a href="">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/spotify.png" alt="">
+									<p>Spotify</p>
+								</a>
+							</div>
+						</div>
+					</div>
 					<div class="episode__heading">
 						<?php the_content(); ?>
 					</div>
@@ -43,7 +64,7 @@ get_header(); ?>
 					<p class="post__white post__white--top"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/white_top.svg" alt=""></p>
 					<div class="episode__question">
 						<h3>Featured Questions <span class="question">?</span><span class="colon">:</span></h3>
-						<ol class="">
+						<ol>
 							<?php
 							if (post_custom('featured_questions')) {
 								$items = explode("\n", post_custom('featured_questions'));
@@ -63,7 +84,8 @@ get_header(); ?>
 				));
 				?>
 				<?php the_post_navigation(); ?>
-			<?php endwhile; // End of the loop. 
+				<?php related_posts(); ?>
+			<?php endwhile; // End of the loop.
 			?>
 
 	</main><!-- #main -->
