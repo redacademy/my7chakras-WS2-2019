@@ -2,6 +2,21 @@
     &__wrapper{
         @include content-wrapper;
     }
+    &__heading{
+        position: relative;
+        margin-bottom: 40px;
+        @include pc{
+            height: 350px;
+        }
+        img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include spandtb{
+                display: none;
+            }
+        }
+    }
     &__categories{
         display: flex;
         justify-content: space-between;
@@ -10,14 +25,15 @@
         }
     }
     &__category{
-        width: 25%;
-        height: 105px;
+        width: 20%;
+        height: 122px;
         background-position: center; 
         background-repeat: no-repeat; 
         background-size: contain; 
         text-align: center;
         position: relative;
         @include sp{
+            height: 105px;
             width: 48%;
         }
         &:first-of-type{
@@ -67,13 +83,47 @@
 
     }
     &__post{
+        border-radius: 15px;
+        box-shadow: $shadow;
+        display: flex;
+        @include sp{
+            flex-direction: column;
+        }
         &Img{
             img{
                 width: 100%;
+                border-radius: 15px;
             }
         }
         &Title{
-            
+            h3{
+                color: $text-color;
+                line-height: 1;
+            }
+        }
+        &Content{
+            padding: 10px;
         }
     }
+}
+
+.episode{
+    &__question{
+        @include content-wrapper;
+        ol{
+            margin-left: 0;
+            padding-left: 0;
+            @include spandtb{
+            list-style-type: none;
+        }
+        li{
+            margin-top: 10px;
+        }
+    }
+    .question{
+        @include spandtb{
+             
+        }
+    }
+}
 }

@@ -130,3 +130,39 @@ a {
 		width: 50%;
 	}
 }
+
+
+.form-container{
+	margin: unset;
+	order: 3;
+	width: 100%;
+}
+
+.search-form{
+	height: 44px;
+	fieldset{
+		border: 0px solid silver;
+		height: 44px;
+
+
+		
+		input{
+			border-radius: 6px;
+			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+			border: solid 1px $purple;
+			font-size: 15px;
+			color: $purple;
+
+			height: 44px;
+			width: 100%;
+
+
+			@include pcandtb{
+				height: 56px;
+					
+			}
+
+
+		}
+	}
+}

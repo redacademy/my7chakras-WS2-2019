@@ -1,9 +1,8 @@
 // Structure
-
 $base__space-unit: 1.5rem;
 
-// Colors
 
+// Colors
 $text-color: #3F3F3F;
 $purple: #323184;
 $pink: #AC5F80;
@@ -22,6 +21,8 @@ $subtitle-size--sp: 17px;
 $text-size--pc: 16px;
 $text-size--sp: 15px;
 
+//Other
+$shadow: 0 1px 10px #b1b1b1;
 
 
 
@@ -34,9 +35,9 @@ $color__background-hr: #ccc;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: #3f3f3f;
+$color__link-visited: #3f3f3f;
+$color__link-hover: #000000;
 $font__main: sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;

@@ -79,6 +79,7 @@ font-family: $font-main !important;
    }
 
    .subscription{
+    
     @include pcandtb{
 
     }
@@ -143,9 +144,6 @@ font-family: $font-main !important;
 font-size: .6rem;
 @include pcandtb{
     font-size: 1rem;
-  
+    }
 }
-
-}
-
 
