@@ -77,14 +77,47 @@ get_header(); ?>
 					</div>
 					<p class="post__white post__white--bottom"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/white_bottom.svg" alt=""></p>
 				</div>
-				<?php
-				wp_link_pages(array(
-					'before' => '<div class="page-links" >' . esc_html('Pages:'),
-					'after'  => '</div>',
-				));
-				?>
-				<?php the_post_navigation(); ?>
-				<?php related_posts(); ?>
+				<div class="post__footer">
+					<?php
+					$prev_post = get_previous_post();
+					$next_post = get_next_post();
+					if ($prev_post || $next_post) :
+					?>
+						<nav class="page-nav">
+							<?php if ($prev_post) :
+							?>
+								<a href="<?php echo get_permalink($prev_post->ID); ?>" class="prev-link">
+									<?php if (get_the_post_thumbnail($prev_post->ID)) :
+									?>
+										<?php echo get_the_post_thumbnail($prev_post->ID, 'full'); ?>
+									<?php else :
+									?>
+										<img src="no-image.jpg" alt="">
+									<?php endif; ?>
+									<p>
+										<span>Previous Episode</span><br /><?php echo get_the_title($prev_post->ID); ?>
+									</p>
+								</a>
+							<?php endif; ?>
+							<?php if ($next_post) :
+							?>
+								<a href="<?php echo get_permalink($next_post->ID); ?>" class="next-link">
+									<?php if (get_the_post_thumbnail($next_post->ID)) :
+									?>
+										<?php echo get_the_post_thumbnail($next_post->ID, 'full'); ?>
+									<?php else :
+									?>
+										<img src="no-image.jpg" alt="">
+									<?php endif; ?>
+									<p>
+										<span>Next Episode</span><br /><?php echo get_the_title($next_post->ID); ?>
+									</p>
+								</a>
+							<?php endif; ?>
+						</nav>
+					<?php endif; ?>
+					<?php related_posts(); ?>
+				</div>
 			<?php endwhile; // End of the loop.
 			?>
 
