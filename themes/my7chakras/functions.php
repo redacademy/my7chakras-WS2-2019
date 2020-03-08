@@ -161,3 +161,8 @@ function max_show_page_number()
 	$max_page = $wp_query->max_num_pages;
 	echo $max_page;
 }
+
+
+/**
+ * post adjacent
+ */

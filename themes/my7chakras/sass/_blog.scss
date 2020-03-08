@@ -137,16 +137,32 @@
     .post{
             &__wrapper{
                 @include content-wrapper;
+                margin-top: 40px;
+            }
+            &__title{
+                line-height: 1.2;
+                @include pc{
+                    margin-top: 20px;
+                    font-size: 32px;
+                    font-family: $font-heading;
+                }
+            }
+            &__num{
+                margin-bottom: 10px;
             }
             &__thumbnail{
                 position:relative;
                 width:100%;
-                height:180px;
+                height: 40vh;
                 overflow:hidden;
+                margin-bottom: 30px;
+                @include spandtb{
+                    height:29vh;
+                }
                 img{
                     width: 100%;
-                    border-radius: 10px;
                     @include spandtb{
+                        border-radius: 10px;
                         position:absolute;
                         top:50%;
                         left:50%;
@@ -157,14 +173,25 @@
                     }
                 }
             }
+            &__tag{
+                    color: $pink;
+                    a{
+                        color: $pink;
+                    }
+            }
             &__text{
-                background-color: #393771;
-                background-image:  linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(160deg, #393771 -38%, #3A3873 5%, #634B7B 33%, #915990 60%, #815373 79%, #8B5565 113%);
-                color: #ffffff;
-                position: relative;
-                padding: 50px 0 80px;
+                @include spandtb{
+                    background-color: #3B388C;
+                    background-image:  linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(160deg, #3B388C -38%, #3A3873 10%, #634B7B 36%, #915990 60%, #815373 79%, #8B5565 113%);
+                    color: #ffffff;
+                    position: relative;
+                    padding: 70px 0 120px;
+                }
             }
             &__white{
+                display: none;
+                @include spandtb{
+                display: block;
                 margin: 0;
                 position: absolute;
                 vertical-align: bottom;
@@ -173,11 +200,89 @@
                     display: block;
                 }
                 &--top{
-                    width: 103%;
-                    top: 0;
+                    width: 100.3%;
+                    top: -1px;
                 }
                 &--bottom{
                     bottom: -2px;
+                    width: 100.3%;
                 }
             }
+        }
+        &__footer{
+            @include content-wrapper;
+        }
+        .yarpp-related{
+            h3{
+                font-weight: normal;
+                font-size: 32px;
+            }
+            .yarpp-thumbnails-horizontal{
+                display: flex;
+                justify-content: space-between;
+            }
+            .yarpp-thumbnail{
+            border: none;
+            width: 28%!important;
+            position:relative;
+            width:100%;
+            height:270px;
+            overflow:hidden;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 0;
+            box-shadow: $shadow;
+            img{
+                margin: 0;
+                position:absolute;
+                top:0;
+                left:50%;
+                transform:translate(-50%,0);
+                border-radius: 10px 10px 0 0;
+                object-fit: cover;
+                width: 100%;
+                height: 65%;
+            }
+        }
+        .yarpp-thumbnail-title{
+            margin-top: 180px;
+            font-weight: normal;
+            font-size: 17px;
+            width: 100%;
+            margin-bottom: 0;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        }
+        .page-nav{
+            display: flex;
+            justify-content: space-between;
+            a{
+                width: 35%;
+                border-radius: 10px;
+                border: none;
+                position:relative;
+                height:132px;
+                overflow:hidden;
+                border-radius: 10px;
+                padding: 5px;
+                margin: 0;
+                box-shadow: $shadow;
+                img{
+                    opacity: 0.7;
+                    margin: 0;
+                    position:absolute;
+                    top:0;
+                    left:50%;
+                    transform:translate(-50%,0);
+                    border-radius: 10px 10px 0 0;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+                p{
+                    position: absolute;
+                }
+            }
+        }
     }
