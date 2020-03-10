@@ -162,7 +162,22 @@ function max_show_page_number()
 	echo $max_page;
 }
 
-
 /**
- * post adjacent
+ * Show max page number
  */
+
+function sort_post_views($query)
+{
+
+	if (is_admin() || !$query->is_main_query()) {
+		return;
+	}
+
+	if ($query->is_home()) {
+		$query->set('orderby', 'meta_value_num');
+		$query->set('meta_key', 'views');
+		$query->set('order', 'DESC');
+		return;
+	}
+}
+add_action('pre_get_posts', 'sort_post_views');

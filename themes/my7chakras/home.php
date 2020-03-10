@@ -32,11 +32,22 @@ get_header(); ?>
             </div>
 
             <h2>Episodes</h2>
-            <?php
-            $count_posts = wp_count_posts();
-            $publish_posts = $count_posts->publish;
-            echo '<p>' . $publish_posts . ' Result(s)</p>';
-            ?>
+            <div class="episodes__info">
+                <?php
+                $count_posts = wp_count_posts();
+                $publish_posts = $count_posts->publish;
+                echo '<p>' . $publish_posts . ' Result(s)</p>';
+                ?>
+                <ul class="gnav">
+                    <li>
+                        <a href="">SORTED: NEWEST TO OLDEST</a>
+                        <ul>
+                            <li><a href="<?php echo add_query_arg(array('order' => 'DESC')); ?>">Newest to oldest</a></li>
+                            <li><a href="<?php echo add_query_arg(array('order' => 'ASC')); ?>">Oldest to newest</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <?php if (have_posts()) : ?>
                 <section class="blog__lists episodes__lists">
                     <?php while (have_posts()) : the_post(); ?>
