@@ -112,8 +112,10 @@
     }
     &__pageNavi{
         font-size: 24px;
-        text-align: center;
         margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .wp-pagenavi{
             display: inline;
             form{
@@ -121,9 +123,7 @@
             }
             select{
             font-size: 24px;
-            padding: 10px;
-            height: 45px;
-            width: 46px;
+            padding: 10px 15px 8px;
             background: transparent;
             border: none;
             box-shadow: $shadow;
@@ -131,6 +131,15 @@
             -moz-appearance: none;
             appearance: none;
             line-height: 1;
+            outline: none;
+            }
+        }
+        p{
+            display: flex;
+            margin: 0;
+            font-size: 24px;
+            img{
+                margin: 0 15px;
             }
         }
     }

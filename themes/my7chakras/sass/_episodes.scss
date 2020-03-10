@@ -198,14 +198,11 @@
 }
 
 .gnav {
-    display: flex;
     height: 2rem;
-    margin: 0 auto;
-    width: 1000px;
 }
-.gnav > li {
-    width: 25%;
+.gnav > li {/*親階層のみ幅を25%にする*/
 }
+/*全てのリスト・リンク共通*/
 .gnav li {
     list-style: none;
     position: relative;
@@ -219,15 +216,15 @@
     width: 100%;
 }
 
-.gnav li form {
+.gnav li li {
     height: 0;
     overflow: hidden;
     transition: .5s;
 }
-.gnav li form a {
+.gnav li li a {
     border-top: 1px solid #eee;
 }
-.gnav li:hover > ul > form {
+.gnav li:hover > ul > li {
     height: 2rem;
     overflow: visible;
 }

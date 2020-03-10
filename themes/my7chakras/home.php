@@ -40,7 +40,7 @@ get_header(); ?>
                 ?>
                 <ul class="gnav">
                     <li>
-                        <a href="">SORTED: NEWEST TO OLDEST</a>
+                        <p>SORTED: NEWEST TO OLDEST</p>
                         <ul>
                             <li><a href="<?php echo add_query_arg(array('order' => 'DESC')); ?>">Newest to oldest</a></li>
                             <li><a href="<?php echo add_query_arg(array('order' => 'ASC')); ?>">Oldest to newest</a></li>
@@ -79,7 +79,8 @@ get_header(); ?>
                     <?php if (function_exists('wp_pagenavi')) {
                         wp_pagenavi();
                     } ?>
-                    <span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pagenation_slash.png" alt=""><?php max_show_page_number(''); ?></span>
+                    <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pagenation_slash.png" alt=""></p>
+                    <p><?php max_show_page_number(''); ?></p>
                 </div>
 
             <?php else : ?>
