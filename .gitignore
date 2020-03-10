@@ -34,6 +34,7 @@ plugins/*
 !plugins/contact-form-7
 !plugins/advanced-custom-fields-pro
 !plugins/yet-another-related-posts-plugin
+!plugins/wp-postviews
 
 
 

@@ -32,11 +32,22 @@ get_header(); ?>
             </div>
 
             <h2>Episodes</h2>
-            <?php
-            $count_posts = wp_count_posts();
-            $publish_posts = $count_posts->publish;
-            echo '<p>' . $publish_posts . ' Result(s)</p>';
-            ?>
+            <div class="episodes__info">
+                <?php
+                $count_posts = wp_count_posts();
+                $publish_posts = $count_posts->publish;
+                echo '<p>' . $publish_posts . ' Result(s)</p>';
+                ?>
+                <ul class="gnav">
+                    <li>
+                        <p>SORTED: NEWEST TO OLDEST</p>
+                        <ul>
+                            <li><a href="<?php echo add_query_arg(array('order' => 'DESC')); ?>">Newest to oldest</a></li>
+                            <li><a href="<?php echo add_query_arg(array('order' => 'ASC')); ?>">Oldest to newest</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <?php if (have_posts()) : ?>
                 <section class="blog__lists episodes__lists">
                     <?php while (have_posts()) : the_post(); ?>
@@ -68,7 +79,8 @@ get_header(); ?>
                     <?php if (function_exists('wp_pagenavi')) {
                         wp_pagenavi();
                     } ?>
-                    <span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pagenation_slash.png" alt=""><?php max_show_page_number(''); ?></span>
+                    <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pagenation_slash.png" alt=""></p>
+                    <p><?php max_show_page_number(''); ?></p>
                 </div>
 
             <?php else : ?>
