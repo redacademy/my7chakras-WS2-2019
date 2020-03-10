@@ -14,10 +14,13 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<div class="bg-img"><h1>About <br> My Seven Chakras </h1></div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+
+	
+
 		<!-- wp:paragraph -->
 <h2>Whether you’re looking to balance your chakras, heal your emotions, discover your purpose, manifest abundance or just feel happy, you are in the right place.</h2>
 <!-- /wp:paragraph -->
