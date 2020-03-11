@@ -32,6 +32,7 @@ get_header(); ?>
             </div>
 
             <h2>Episodes</h2>
+
             <div class="episodes__info">
                 <?php
                 $count_posts = wp_count_posts();
@@ -76,11 +77,18 @@ get_header(); ?>
 
                 </section>
                 <div class="blog__pageNavi">
-                    <?php if (function_exists('wp_pagenavi')) {
-                        wp_pagenavi();
-                    } ?>
-                    <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pagenation_slash.png" alt=""></p>
-                    <p><?php max_show_page_number(''); ?></p>
+                    <?php if (have_posts()) :
+                        while (have_posts()) : the_post();
+
+                        endwhile;
+
+                        if (function_exists('pagination')) :
+                            pagination($wp_query->max_num_pages, get_query_var('paged'));
+                        endif;
+
+                    else :
+                        echo 'no posts';
+                    endif; ?>
                 </div>
 
             <?php else : ?>

@@ -116,6 +116,70 @@ get_header(); ?>
 							<?php endif; ?>
 						</nav>
 					<?php endif; ?>
+
+					<div id="related-post">
+						<h3>関連記事</h3>
+
+
+						<div class="related-post-list">
+
+
+							<?php
+							$categories = get_the_category($post->ID);
+							$category_ID = array();
+							foreach ($categories as $category) :
+								array_push($category_ID, $category->cat_ID);
+							endforeach;
+
+							$args = array(
+								'post__not_in' => array($post->ID),
+								'posts_per_page' => 3, //表示件数
+								'category__in' => $category_ID,
+								'orderby' => 'rand',
+							);
+
+							$query = new WP_Query($args);
+
+							if ($query->have_posts()) :
+								while ($query->have_posts()) : $query->the_post(); ?>
+
+									<div class="related-post-sub">
+
+										<div class="related-post-thumb">
+											<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+
+												<?php if (has_post_thumbnail()) : ?>
+													<?php the_post_thumbnail('full'); ?>
+												<?php else : ?>
+
+													<p class="thumb-noimage">no image</p>
+
+												<?php endif; ?>
+
+											</a>
+
+
+										</div>
+
+
+										<div class="related-post-content">
+
+											<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+
+										</div>
+									</div>
+
+								<?php endwhile; ?>
+
+							<?php else : ?>
+
+								<p>関連記事はありませんでした。</p>
+
+							<?php endif;
+							wp_reset_postdata(); ?>
+
+						</div>
+					</div>
 					<?php related_posts(); ?>
 				</div>
 			<?php endwhile; // End of the loop.

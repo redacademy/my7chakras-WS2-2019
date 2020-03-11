@@ -197,34 +197,33 @@
 }
 }
 
-.gnav {
-    height: 2rem;
-}
-.gnav > li {/*親階層のみ幅を25%にする*/
-}
-/*全てのリスト・リンク共通*/
-.gnav li {
-    list-style: none;
-    position: relative;
-}
-.gnav li a {
-    display: block;
-    height: 2rem;
-    line-height: 2rem;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-}
+// .gnav {
+//     height: 2rem;
+// }
+// .gnav > li {
+// }
+// .gnav li {
+//     list-style: none;
+//     position: relative;
+// }
+// .gnav li a {
+//     display: block;
+//     height: 2rem;
+//     line-height: 2rem;
+//     text-align: center;
+//     text-decoration: none;
+//     width: 100%;
+// }
 
-.gnav li li {
-    height: 0;
-    overflow: hidden;
-    transition: .5s;
-}
-.gnav li li a {
-    border-top: 1px solid #eee;
-}
-.gnav li:hover > ul > li {
-    height: 2rem;
-    overflow: visible;
-}
+// .gnav li li {
+//     height: 0;
+//     overflow: hidden;
+//     transition: .5s;
+// }
+// .gnav li li a {
+//     border-top: 1px solid #eee;
+// }
+// .gnav li:hover > ul > li {
+//     height: 2rem;
+//     overflow: visible;
+// }

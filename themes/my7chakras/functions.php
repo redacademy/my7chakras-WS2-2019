@@ -162,22 +162,60 @@ function max_show_page_number()
 	echo $max_page;
 }
 
+
 /**
- * Show max page number
+ * pagenation
  */
 
-function sort_post_views($query)
+function pagination($pages, $paged, $range = 2, $show_only = false)
 {
 
-	if (is_admin() || !$query->is_main_query()) {
+	$pages = (int) $pages;
+	$paged = $paged ?: 1;
+
+	$text_first   = "« First";
+	$text_before  = "‹ Before";
+	$text_next    = "Next ›";
+	$text_last    = "Last »";
+
+	if ($show_only && $pages === 1) {
+
+		echo '<div class="pagination"><span class="current pager">1</span></div>';
 		return;
 	}
 
-	if ($query->is_home()) {
-		$query->set('orderby', 'meta_value_num');
-		$query->set('meta_key', 'views');
-		$query->set('order', 'DESC');
-		return;
+	if ($pages === 1) return;
+
+	if (1 !== $pages) {
+
+		echo '<div class="pagination"><span class="page_num">Page ', $paged, ' of ', $pages, '</span>';
+		if ($paged > $range + 1) {
+
+			echo '<a href="', get_pagenum_link(1), '" class="first">', $text_first, '</a>';
+		}
+		if ($paged > 1) {
+
+			echo '<a href="', get_pagenum_link($paged - 1), '" class="prev">', $text_before, '</a>';
+		}
+		for ($i = 1; $i <= $pages; $i++) {
+
+			if ($i <= $paged + $range && $i >= $paged - $range) {
+
+				if ($paged === $i) {
+					echo '<span class="current pager">', $i, '</span>';
+				} else {
+					echo '<a href="', get_pagenum_link($i), '" class="pager">', $i, '</a>';
+				}
+			}
+		}
+		if ($paged < $pages) {
+
+			echo '<a href="', get_pagenum_link($paged + 1), '" class="next">', $text_next, '</a>';
+		}
+		if ($paged + $range < $pages) {
+
+			echo '<a href="', get_pagenum_link($pages), '" class="last">', $text_last, '</a>';
+		}
+		echo '</div>';
 	}
 }
-add_action('pre_get_posts', 'sort_post_views');

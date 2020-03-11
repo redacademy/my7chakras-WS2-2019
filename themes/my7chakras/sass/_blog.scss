@@ -143,6 +143,50 @@
             }
         }
     }
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+        position: relative;
+        font-size: 13px;
+    }
+    
+    .pagination span, .pagination a {
+        display: block;
+        width: auto;
+        margin: 4px;
+        padding: 8px;
+        border: 1px solid #000;
+        background-color: #fff;
+        text-decoration: none;
+        text-align: center;
+        line-height: 16px;
+    }
+    
+    .pagination .pager{
+        width: 32px;
+    }
+    
+    .pagination a:hover,
+    .pagination .current  {
+        color: #fff;
+        border-color: #000;
+        background-color: #000;
+    }
+    
+    .pagination a.prev {
+        margin-right: 16px;
+    }
+    .pagination a.next {
+        margin-left: 16px;
+    }
+    .pagination a.first {}
+    .pagination a.last {}
+    
+    .pagination span.page_num {
+        display: none;
+    }
     }
 
     .post{
@@ -296,4 +340,5 @@
                 }
             }
         }
+        
     }
