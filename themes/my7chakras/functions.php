@@ -219,3 +219,14 @@ function pagination($pages, $paged, $range = 2, $show_only = false)
 		echo '</div>';
 	}
 }
+
+
+/**
+ * audio
+ */
+
+function enqueue_my_script()
+{
+	wp_enqueue_script('functions_js', get_stylesheet_directory_uri() . '/js/audiojs/audio.min.js', array('jquery'), false, false);
+}
+add_action('wp_enqueue_scripts', 'enqueue_my_script');

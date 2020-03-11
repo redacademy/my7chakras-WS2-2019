@@ -41,7 +41,7 @@ get_header(); ?>
                 ?>
                 <ul class="gnav">
                     <li>
-                        <p>SORTED: NEWEST TO OLDEST</p>
+                        <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/sort.png" alt="">SORTED: NEWEST TO OLDEST</p>
                         <ul>
                             <li><a href="<?php echo add_query_arg(array('order' => 'DESC')); ?>">Newest to oldest</a></li>
                             <li><a href="<?php echo add_query_arg(array('order' => 'ASC')); ?>">Oldest to newest</a></li>

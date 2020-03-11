@@ -37,9 +37,12 @@ get_header(); ?>
 					</div>
 					<div class="episode__btn">
 						<div class="episode__btnPodcast">
+							<audio src="https://res.cloudinary.com/code-kitchen/video/upload/v1555038697/posts/zk5sldkxuebny7mwlhh3.mp3"></audio>
 							<h5>Stream Podcast</h5>
-							<div class="episode__">
-
+							<div class="episode__play">
+								<button data-skip="-30" class="player__button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/replay-30.png" alt=""></button>
+								<button class="player__button toggle" title="Toggle Play"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/play-circle.png" alt=""></button>
+								<button data-skip="30" class="player__button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/forward-30.png" alt=""></button>
 							</div>
 						</div>
 						<div class="episode__btnApp">
@@ -118,7 +121,7 @@ get_header(); ?>
 					<?php endif; ?>
 
 					<div id="related-post">
-						<h3>関連記事</h3>
+						<h3>Related posts number</h3>
 
 
 						<div class="related-post-list">
@@ -133,7 +136,7 @@ get_header(); ?>
 
 							$args = array(
 								'post__not_in' => array($post->ID),
-								'posts_per_page' => 3, //表示件数
+								'posts_per_page' => 3,
 								'category__in' => $category_ID,
 								'orderby' => 'rand',
 							);
@@ -173,7 +176,7 @@ get_header(); ?>
 
 							<?php else : ?>
 
-								<p>関連記事はありませんでした。</p>
+								<p>There is no related post</p>
 
 							<?php endif;
 							wp_reset_postdata(); ?>
