@@ -97,9 +97,10 @@ get_header(); ?>
 									?>
 										<img src="no-image.jpg" alt="">
 									<?php endif; ?>
-									<p>
-										<span>Previous Episode</span><br /><?php echo get_the_title($prev_post->ID); ?>
-									</p>
+									<div>
+										<p>Previous Episode</p>
+										<p class="page-navTitle"><?php echo get_the_title($next_post->ID); ?></p>
+									</div>
 								</a>
 							<?php endif; ?>
 							<?php if ($next_post) :
@@ -112,28 +113,24 @@ get_header(); ?>
 									?>
 										<img src="no-image.jpg" alt="">
 									<?php endif; ?>
-									<p>
-										<span>Next Episode</span><br /><?php echo get_the_title($next_post->ID); ?>
-									</p>
+									<div>
+										<p class="page-navTitle">Next Episode</p>
+										<p><?php echo get_the_title($next_post->ID); ?></p>
+									</div>
 								</a>
 							<?php endif; ?>
 						</nav>
 					<?php endif; ?>
 
-					<div id="related-post">
-						<h3>Related posts number</h3>
-
-
-						<div class="related-post-list">
-
-
+					<div class="post__related">
+						<h2>Related episodes</h2>
+						<div class="post__relatedList">
 							<?php
 							$categories = get_the_category($post->ID);
 							$category_ID = array();
 							foreach ($categories as $category) :
 								array_push($category_ID, $category->cat_ID);
 							endforeach;
-
 							$args = array(
 								'post__not_in' => array($post->ID),
 								'posts_per_page' => 3,
@@ -146,31 +143,26 @@ get_header(); ?>
 							if ($query->have_posts()) :
 								while ($query->have_posts()) : $query->the_post(); ?>
 
-									<div class="related-post-sub">
-
-										<div class="related-post-thumb">
-											<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
-
+									<article class="related-post-sub">
+										<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+											<div class="blog__postImg">
 												<?php if (has_post_thumbnail()) : ?>
-													<?php the_post_thumbnail('full'); ?>
-												<?php else : ?>
-
-													<p class="thumb-noimage">no image</p>
-
+													<?php the_post_thumbnail('large'); ?>
 												<?php endif; ?>
-
-											</a>
-
-
+												<p class="blog__postNum">Episode <?php echo getPostThNumber() ?></p>
+											</div>
+										</a>
+										<div class="blog__postContent">
+											<div class="blog__postDay">
+												<?php echo get_the_date('F d'); ?>
+											</div>
+											<?php the_title(sprintf('<a href="%s" rel="bookmark" class="blog__postTitle"><h3>', esc_url(get_permalink())), '</h3></a>'); ?>
+											<p class="blog__postTag"><?php the_tags('', ' | '); ?></p>
+											<div class="blog__postExcerpt">
+												<?php the_excerpt(); ?>
+											</div>
 										</div>
-
-
-										<div class="related-post-content">
-
-											<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-
-										</div>
-									</div>
+									</article>
 
 								<?php endwhile; ?>
 
