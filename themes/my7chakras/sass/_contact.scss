@@ -1,0 +1,97 @@
+.contact-container{
+    @include box-column;
+    @include pcandtb{
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+}
+
+.contact-forms{
+    @include box-row;
+}
+
+.contact-button-wrap{
+    @include box-row;
+}
+
+
+// .contact-list > li{
+//     display: none;
+
+// }
+
+
+.contact-info{
+
+
+    width: 100%;
+    padding: 0% 2%;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.06);
+    @include pcandtb{
+        width: 40%;
+    }
+
+
+}
+
+.contact-list{
+    @include reset;
+    
+    li{
+        display: none;
+        margin: 30px 0;
+        list-style-type: '* ';
+        @include pcandtb{
+            display: list-item;
+        }
+    }
+}
+
+.phone{
+    display: unset !important;
+}
+
+.contact-button-wrap{
+    button{
+        color: $purple;
+        
+        background: none;
+        border: none;
+        border-bottom:  solid;
+        width: 50%;
+        padding: unset;
+        font-family: $font-heading;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 1.76;
+        letter-spacing: normal;
+        text-align: center;
+        
+    }
+}
+
+
+
+.phone-buttons{
+    @include pcandtb{
+        display: none;
+    }
+    
+}
+
+
+.computer-buttons{
+    @include pcandtb{
+        display: none;
+    }
+}
+
+.ds-buttons{
+
+    display: none;
+    @include pcandtb{
+        display: flex;
+    }
+}
+

@@ -142,23 +142,48 @@ a {
 	height: 44px;
 	fieldset{
 		border: 0px solid silver;
-		height: 44px;
+		height: fit-content;
+		align-items: center;
+
+		
+		label{
+
+			box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			height: fit-content;
+			border: solid 1px $purple;
+			border-radius: 6px;
+			align-items: center;
+	
+					.icon-search{
+						height: 15.9px;
+					}
+					.search-submit{
+						background-color: unset;
+						border: unset;
+					}	
+				
+		}
+
 
 
 		
 		input{
 			border-radius: 6px;
-			box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-			border: solid 1px $purple;
+			border: none;
 			font-size: 15px;
 			color: $purple;
 
 			height: 44px;
-			width: 100%;
+			width: 85%;
+			padding-left: 16px;
 
 
 			@include pcandtb{
 				height: 56px;
+				width: 95%;
 					
 			}
 
@@ -166,3 +191,25 @@ a {
 		}
 	}
 }
+
+.mega-indicator{
+	color: $purple !important;
+
+	
+	@include pcandtb{
+		color: unset !important;
+
+
+			
+	}
+}
+
+
+
+
+
+.contact-aj{
+	display: none;
+
+}
+
