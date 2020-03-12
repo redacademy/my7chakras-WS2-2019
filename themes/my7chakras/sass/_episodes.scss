@@ -79,6 +79,92 @@
             width: 100%;
         }
     }
+    &__sort {
+        height: 2rem;
+        @include spandtb{
+            display: none;
+        }
+    }
+    &__sort li {
+        list-style: none;
+        position: relative;
+    }
+    &__sort li a {
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+    }
+    &__sort li p {
+            padding-right: 15px;
+            position: relative;
+            font-size: 17px;
+            margin: 0;
+            &:before{
+                content: '';
+                display: inline-block;
+                width: 24px;
+                height: 17px;
+                position: absolute;
+                left: -30px;
+                top: 47%;
+                transform:translate(0,-50%);
+                background-image: url(../../assets/images/episodes/sort.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                vertical-align: middle;
+            }
+            &:after{
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: -15px;
+                top: 65%;
+                transform:translate(0,-50%);
+                background-image: url(../../assets/images/episodes/down-arrow.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                vertical-align: middle;
+            }
+    }
+    &__sort li ul{
+        border-radius: 5px;
+        background: #ffffff;
+        padding-left: 0;
+        box-shadow: $shadow;
+        position: absolute;
+        right: -15px;
+        overflow: hidden;
+    }
+    &__sort li li {
+        height: 0;
+    }
+    &__sort li li a {
+        &:hover{
+            color: $purple;
+        }
+    }
+    &__sort li:hover > ul {
+        animation: fadeIn .5s ease 0s 1 normal;
+        -webkit-animation: fadeIn .5s ease 0s 1 normal;
+    }
+    &__sort li:hover > ul > li {
+        height: 2.5rem;
+        padding: 5px 50px 5px 15px;
+    }
+    @keyframes fadeIn {
+        0% {opacity: 0}
+        100% {opacity: 1}
+    }
+    
+    @-webkit-keyframes fadeIn {
+        0% {opacity: 0}
+        100% {opacity: 1}
+    }
     &__info{
         display: flex;
         justify-content: space-between;
@@ -195,36 +281,4 @@
         }
     }
 }
-}
-
-.gnav {
-    height: 2rem;
-}
-.gnav > li {/*親階層のみ幅を25%にする*/
-}
-/*全てのリスト・リンク共通*/
-.gnav li {
-    list-style: none;
-    position: relative;
-}
-.gnav li a {
-    display: block;
-    height: 2rem;
-    line-height: 2rem;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-}
-
-.gnav li li {
-    height: 0;
-    overflow: hidden;
-    transition: .5s;
-}
-.gnav li li a {
-    border-top: 1px solid #eee;
-}
-.gnav li:hover > ul > li {
-    height: 2rem;
-    overflow: visible;
 }

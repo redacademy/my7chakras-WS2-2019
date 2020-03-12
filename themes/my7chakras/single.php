@@ -37,9 +37,12 @@ get_header(); ?>
 					</div>
 					<div class="episode__btn">
 						<div class="episode__btnPodcast">
+							<audio src="https://res.cloudinary.com/code-kitchen/video/upload/v1555038697/posts/zk5sldkxuebny7mwlhh3.mp3"></audio>
 							<h5>Stream Podcast</h5>
-							<div class="episode__">
-
+							<div class="episode__play">
+								<button data-skip="-30" class="player__button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/replay-30.png" alt=""></button>
+								<button class="player__button toggle" title="Toggle Play"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/play-circle.png" alt=""></button>
+								<button data-skip="30" class="player__button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/forward-30.png" alt=""></button>
 							</div>
 						</div>
 						<div class="episode__btnApp">
@@ -94,9 +97,10 @@ get_header(); ?>
 									?>
 										<img src="no-image.jpg" alt="">
 									<?php endif; ?>
-									<p>
-										<span>Previous Episode</span><br /><?php echo get_the_title($prev_post->ID); ?>
-									</p>
+									<div>
+										<p>Previous Episode</p>
+										<p class="page-navTitle"><?php echo get_the_title($next_post->ID); ?></p>
+									</div>
 								</a>
 							<?php endif; ?>
 							<?php if ($next_post) :
@@ -109,13 +113,68 @@ get_header(); ?>
 									?>
 										<img src="no-image.jpg" alt="">
 									<?php endif; ?>
-									<p>
-										<span>Next Episode</span><br /><?php echo get_the_title($next_post->ID); ?>
-									</p>
+									<div>
+										<p class="page-navTitle">Next Episode</p>
+										<p><?php echo get_the_title($next_post->ID); ?></p>
+									</div>
 								</a>
 							<?php endif; ?>
 						</nav>
 					<?php endif; ?>
+
+					<div class="post__related">
+						<h2>Related episodes</h2>
+						<div class="post__relatedList">
+							<?php
+							$categories = get_the_category($post->ID);
+							$category_ID = array();
+							foreach ($categories as $category) :
+								array_push($category_ID, $category->cat_ID);
+							endforeach;
+							$args = array(
+								'post__not_in' => array($post->ID),
+								'posts_per_page' => 3,
+								'category__in' => $category_ID,
+								'orderby' => 'rand',
+							);
+
+							$query = new WP_Query($args);
+
+							if ($query->have_posts()) :
+								while ($query->have_posts()) : $query->the_post(); ?>
+
+									<article class="related-post-sub">
+										<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+											<div class="blog__postImg">
+												<?php if (has_post_thumbnail()) : ?>
+													<?php the_post_thumbnail('large'); ?>
+												<?php endif; ?>
+												<p class="blog__postNum">Episode <?php echo getPostThNumber() ?></p>
+											</div>
+										</a>
+										<div class="blog__postContent">
+											<div class="blog__postDay">
+												<?php echo get_the_date('F d'); ?>
+											</div>
+											<?php the_title(sprintf('<a href="%s" rel="bookmark" class="blog__postTitle"><h3>', esc_url(get_permalink())), '</h3></a>'); ?>
+											<p class="blog__postTag"><?php the_tags('', ' | '); ?></p>
+											<div class="blog__postExcerpt">
+												<?php the_excerpt(); ?>
+											</div>
+										</div>
+									</article>
+
+								<?php endwhile; ?>
+
+							<?php else : ?>
+
+								<p>There is no related post</p>
+
+							<?php endif;
+							wp_reset_postdata(); ?>
+
+						</div>
+					</div>
 					<?php related_posts(); ?>
 				</div>
 			<?php endwhile; // End of the loop.
