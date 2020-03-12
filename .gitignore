@@ -32,6 +32,10 @@ plugins/*
 !plugins/my7chakras/
 !plugins/business-info/
 !plugins/contact-form-7
+!plugins/advanced-custom-fields-pro
+!plugins/yet-another-related-posts-plugin
+!plugins/wp-postviews
+!plugins/chakra-functionality
 
 
 

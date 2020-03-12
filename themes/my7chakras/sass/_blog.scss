@@ -1,11 +1,11 @@
 .blog{
     &__post{
         border-radius: 10px;
-        box-shadow: 0 1px 10px #b1b1b1;
+        box-shadow: $shadow;
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
-        background: #F7F7F7;
+        background: #fff;
         @include pc{
         height: 235px;
         justify-content: flex-start;
@@ -110,4 +110,203 @@
             }
         }
     }
-}
+    &__pageNavi{
+        font-size: 24px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .wp-pagenavi{
+            display: inline;
+            form{
+                display: inline;
+            }
+            select{
+            font-size: 24px;
+            padding: 10px 15px 8px;
+            background: transparent;
+            border: none;
+            box-shadow: $shadow;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            line-height: 1;
+            outline: none;
+            }
+        }
+        p{
+            display: flex;
+            margin: 0;
+            font-size: 24px;
+            img{
+                margin: 0 15px;
+            }
+        }
+    }
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+        position: relative;
+        font-size: 13px;
+    }
+    
+    .pagination span, .pagination a {
+        display: block;
+        width: auto;
+        margin: 4px;
+        padding: 8px 8px 6px;
+        border: 1px solid $purple;
+        background-color: #fff;
+        text-decoration: none;
+        text-align: center;
+        line-height: 16px;
+        color: $purple;
+    }
+    
+    .pagination .pager{
+        width: 32px;
+        border-radius: 50%;
+    }
+    
+    .pagination a:hover,
+    .pagination .current  {
+        color: #fff;
+        border-color: $purple;
+        background-color: $purple;
+    }
+    
+    .pagination a.prev {
+        margin-right: 16px;
+    }
+    .pagination a.next {
+        margin-left: 16px;
+    }
+    
+    .pagination span.page_num {
+        display: none;
+    }
+    }
+
+    .post{
+            &__wrapper{
+                @include content-wrapper;
+                margin-top: 40px;
+            }
+            &__title{
+                line-height: 1.2;
+                @include pc{
+                    margin-top: 20px;
+                    font-size: 32px;
+                    font-family: $font-heading;
+                }
+            }
+            &__num{
+                margin-bottom: 10px;
+            }
+            &__thumbnail{
+                position:relative;
+                width:50vw;
+                height: 40vh;
+                overflow:hidden;
+                margin: auto;
+                margin-bottom: 30px;
+                @include spandtb{
+                    height:29vh;
+                }
+                img{
+                    width: 100%;
+                    @include spandtb{
+                        border-radius: 10px;
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%,-50%);
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            &__tag{
+                    color: $pink;
+                    a{
+                        color: $pink;
+                    }
+            }
+            &__text{
+                @include spandtb{
+                    background-color: #3B388C;
+                    background-image:  linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(160deg, #3B388C -38%, #3A3873 10%, #634B7B 36%, #915990 60%, #815373 79%, #8B5565 113%);
+                    color: #ffffff;
+                    position: relative;
+                    padding: 70px 0 120px;
+                }
+            }
+            &__white{
+                display: none;
+                @include spandtb{
+                display: block;
+                margin: 0;
+                position: absolute;
+                vertical-align: bottom;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+                &--top{
+                    width: 100.3%;
+                    top: -1px;
+                }
+                &--bottom{
+                    bottom: -2px;
+                    width: 100.3%;
+                }
+            }
+        }
+        &__footer{
+            @include content-wrapper;
+        }
+        
+        .page-nav{
+            display: flex;
+            justify-content: space-between;
+            a{
+                width: 35%;
+                border-radius: 10px;
+                border: none;
+                position:relative;
+                height:132px;
+                overflow:hidden;
+                border-radius: 10px;
+                padding: 5px;
+                margin: 0;
+                box-shadow: $shadow;
+                img{
+                    opacity: 0.6;
+                    margin: 0;
+                    position:absolute;
+                    top:0;
+                    left:50%;
+                    transform:translate(-50%,0);
+                    border-radius: 10px 10px 0 0;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+                div{
+                    position: absolute;
+                    padding: 20px;
+                    p{
+                        margin-bottom: 10px;
+                        margin-top: 0;
+                    }
+                }
+            }
+            &Title{
+                font-size: 17px;
+            }
+        }
+        
+    }
