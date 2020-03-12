@@ -85,3 +85,22 @@ textarea {
 .show{
 	display: inline;
 }
+
+.contact-forms{
+	input{
+		opacity: 0.05;
+		background-color: $purple;
+	}
+
+	textarea{
+		opacity: 0.05;
+		background-color: $purple;
+	}
+
+	.wpcf7-submit{
+		opacity: 1;
+		background-color: $purple;
+		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+		width: 100%;
+	}
+}

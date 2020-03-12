@@ -6,6 +6,13 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 2%;
+    align-items: center;
+    padding-bottom: 10%;
+
+    @include pcandtb{
+        padding-bottom: unset;
+    }
+
 
     .main-navigation {
         width: unset;
@@ -22,12 +29,15 @@
 
    .menu-menu-1-container{
 
+    
+
         ul{
             @include box-column;
             list-style: none;
             margin: 0%;
             padding: 0%;
-            li{
+            .menu-item{
+                a{
                 margin: 0 3% ;
                 border-radius: 5px;
                 height: 73px;
@@ -41,6 +51,7 @@
                     @include reset; 
                     box-shadow: unset;
                 }
+            }
             }
             @include pcandtb{
                 @include box-row; 
@@ -86,11 +97,114 @@
     
     display: none;
     width: 100%;
+    height: fit-content;
 
     @include pcandtb{
         display: unset;
         width: 80%;
     }
+}
 
 
+
+
+fieldset{
+    height: fit-content;
+    label{
+
+        height: fit-content;
+    }
+}
+
+
+.sub-menu{
+    li{
+       
+        a{
+            @include reset;
+            padding: unset!important;
+            box-shadow: unset!important;
+            box-shadow:0px 2px 0px rgba(0, 0, 0, 0.16)!important;
+            padding-left: 8%!important;
+
+            @include pcandtb{
+                @include reset;
+                width: 140px;
+                border-radius: 0px !important;
+                height: fit-content !important;
+                padding: 10%!important;;
+            }
+           
+        }
+
+    }
+            @include pcandtb{
+                background-color: $white;
+                display: flex;
+                flex-direction: column!important;
+                position: absolute;
+                top: 70%;
+                width: fit-content;
+                border-radius: px;
+                box-shadow:0px 0px 3px rgba(0, 0, 0, 0.16)!important;
+            }
+
+}
+
+.sub-menu-container{
+    @include pcandtb{
+        position: relative;
+    }
+}
+
+.menu-item-has-children{
+
+    .icon-menu{
+        display: flex;
+        justify-content: space-between;
+
+        @include pcandtb{
+
+            width: fit-content;
+        }
+        
+    }
+        .icon-menu::after{
+            padding-top: unset;
+           font-size: 25px;
+           font-weight: 100;
+            content: "+";
+            color: $purple;
+            @include pcandtb{
+                transition: 1s all ;
+                margin-left: 20%;
+                font-size: 1.2rem;
+                color: rgb(80, 80, 80);
+                content: "<";
+                font-weight: 300;
+                transform: rotate(270deg);
+            } 
+    }
+}
+
+.close-icon{
+    .icon-menu:after{
+
+        content: "-";
+        @include pcandtb{
+            transition: 1s all;
+            content: ">";
+            transform: rotate(90deg);
+        } 
+    }
+}
+
+
+
+
+
+
+
+.change-color{
+    opacity: 0.5;
 }
