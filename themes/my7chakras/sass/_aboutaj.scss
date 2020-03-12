@@ -1,0 +1,100 @@
+.aboutaj{
+
+    .bg-img {
+        background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35.png);
+        background-repeat: no-repeat;
+        background-position:right ;
+        width: 375px;
+        height: 285px;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+    
+        @include pcandtb{
+            width: 100%;
+            height: 339px;
+        }
+    }
+
+h1{
+    position: absolute;
+    top: 170px;
+    width: 194px;
+    height: 76px;
+    font-family: Mazzard-H;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #3f3f3f;
+
+    
+    
+    @include pcandtb {
+
+        width: 384px;
+        height: 55px;
+        font-family: MazzardH-Bold-H;
+        font-size: 55px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.18;
+        letter-spacing: 0.22px;
+        text-align: left;
+        color: #3f3f3f;
+
+       
+    }
+ 
+    
+}
+
+h3{
+    bottom: 400px;
+    position: absolute;
+    width: 185px;
+    height: 125px;
+    font-family: Meticula;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.06px;
+    text-align: left;
+    color: #212121;
+}
+
+p{
+    
+    font-family: Meticula;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: normal;
+    text-align: left;
+    color: #3f3f3f;
+
+    @include pcandtb {
+
+        padding-right: 134px;
+        padding-left: 134px;
+    
+        font-family: Meticula-Regular;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.65;
+        letter-spacing: -0.14px;
+        text-align: left;
+        color: #2f2f2f;
+    }
+  }
+}
