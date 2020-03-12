@@ -156,7 +156,7 @@
         display: block;
         width: auto;
         margin: 4px;
-        padding: 8px 8px 7px;
+        padding: 8px 8px 6px;
         border: 1px solid $purple;
         background-color: #fff;
         text-decoration: none;
@@ -207,9 +207,10 @@
             }
             &__thumbnail{
                 position:relative;
-                width:100%;
+                width:50vw;
                 height: 40vh;
                 overflow:hidden;
+                margin: auto;
                 margin-bottom: 30px;
                 @include spandtb{
                     height:29vh;
@@ -296,6 +297,9 @@
                 }
                 p{
                     position: absolute;
+                    span{
+                        padding-bottom: 10px;
+                    }
                 }
             }
         }

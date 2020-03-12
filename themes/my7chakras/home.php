@@ -39,9 +39,9 @@ get_header(); ?>
                 $publish_posts = $count_posts->publish;
                 echo '<p>' . $publish_posts . ' Result(s)</p>';
                 ?>
-                <ul class="gnav">
+                <ul class="episodes__sort">
                     <li>
-                        <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/sort.png" alt="">SORTED: NEWEST TO OLDEST</p>
+                        <p>Sorted: Newest to oldest</p>
                         <ul>
                             <li><a href="<?php echo add_query_arg(array('order' => 'DESC')); ?>">Newest to oldest</a></li>
                             <li><a href="<?php echo add_query_arg(array('order' => 'ASC')); ?>">Oldest to newest</a></li>
