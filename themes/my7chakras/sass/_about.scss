@@ -10,22 +10,47 @@
     background-color: #ffffff;
 
     @include pcandtb{
+        background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35@2x.png);
+        background-repeat: no-repeat;
+        background-position: 100% 96%;
+        padding-top: 90px;
+        height: 403px;
         width: 100%;
-        height: 339px;
+        object-fit: contain;
+        
+       
     }
 }
 
+
+.support-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: auto;
+}
 
 
 h1{
     position: absolute;
     top: 200px;
-    
+    margin: auto;
+
+    @include pcandtb{
+        padding-left: 350px;
+        padding-top: 80px;
+    }
+
+
 }
 
 h2{
-    width: 300px;
+
+    // width: 300px;
     font-family: Meticula;
+    font-size: 17px;
+    font-family: $font-main;
+    width: 300px;
     font-size: 15px;
     font-weight: normal;
     font-stretch: normal;
@@ -34,7 +59,7 @@ h2{
     letter-spacing: 0.06px;
     text-align: left;
     color: #212121;
-
+    margin: auto;
     @include pcandtb {
         width: 731px;
         font-size: 20px;
@@ -43,10 +68,11 @@ h2{
         color: #2f2f2f;
     }
 
+
 }
 
 h3{
-    
+    text-align: center!important;
     height: 24px;
     font-size: 22px;
     font-stretch: normal;
@@ -55,14 +81,15 @@ h3{
     letter-spacing: 0.22px;
     text-align: left;
     color: #3f3f3f;
+    margin: auto;
 }
 
 h6{
     width: 303px;
     height: 105px;
     opacity: 0.9;
-    font-family: Meticula;
     font-size: 15px;
+    font-family: $font-main;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -70,11 +97,15 @@ h6{
     letter-spacing: 0.06px;
     text-align: center;
     color: #212121;
-   
+    margin: auto;
+
 }
 
 p{
-    
+
+    margin: auto;
+   font-size: 15px;
+   font-family: $font-main ;
     font-size: 17px;
     letter-spacing: normal;
     color: #3f3f3f;
@@ -88,6 +119,10 @@ p{
     }
 
 
+
+}
+figure{
+    text-align: center;
 }
 
 figcaption{
@@ -99,6 +134,18 @@ figcaption{
     line-height: 1.18;
     letter-spacing: 0.15px;
     color: #3f3f3f;
+    display: block!important;
 
+}
+.entry-content{
+    @include content-wrapper;
+}
+.row-one{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.eachvalue-wrap{
+    margin: 20px;
 }
 }

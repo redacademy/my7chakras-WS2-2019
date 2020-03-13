@@ -20,7 +20,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-<h2>Contact AJ</h2>
-<p>How can AJ help you?</p>
 
-<?php get_footer(); ?>
+
+	<?php wp_footer(); ?>

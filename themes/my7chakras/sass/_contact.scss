@@ -1,25 +1,59 @@
 .contact-container{
     @include box-column;
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+
+    h1{
+        position: unset;
+        @include reset;
+    }
+    label{
+        font-family: $font-heading;
+        color: $purple;
+    }
+
     @include pcandtb{
-        display: flex;
-        flex-direction: row-reverse;
+        display: grid;
+        grid-template-columns: 45% 45% ;
+        grid-template-rows: auto;
+        gap: 0% 2%;
+        
 
     }
+
+
 }
 
-.contact-forms{
-    @include box-row;
+.buttons-wrapper{
+    @include box-row; 
+    button{
+        color: $purple;
+        background: none;
+        border: none;
+        border-bottom:  solid;
+        width: 50%;
+        padding: unset;
+        font-family: $font-heading;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 1.76;
+        letter-spacing: normal;
+        text-align: center;
+        
+    }
+            @include pcandtb{
+                order: 1;
+                grid-row: 2;
+            }
+
+
 }
 
-.contact-button-wrap{
-    @include box-row;
-}
 
 
-// .contact-list > li{
-//     display: none;
 
-// }
+
 
 
 .contact-info{
@@ -37,48 +71,31 @@
 
 .contact-list{
     @include reset;
-    
+
     li{
         display: none;
         margin: 30px 0;
         list-style-type: '* ';
         @include pcandtb{
+            margin: 25px 0;
             display: list-item;
         }
     }
-}
-
-.phone{
-    display: unset !important;
-}
-
-.contact-button-wrap{
-    button{
-        color: $purple;
-        
-        background: none;
-        border: none;
-        border-bottom:  solid;
-        width: 50%;
-        padding: unset;
-        font-family: $font-heading;
-        font-size: 17px;
-        font-weight: bold;
-        line-height: 1.76;
-        letter-spacing: normal;
-        text-align: center;
-        
+        li:nth-of-type(2){
+        display: unset;
     }
 }
 
-
-
-.phone-buttons{
+.contact-forms{
     @include pcandtb{
-        display: none;
+
+        width: 80%;
+        margin: auto;
     }
-    
 }
+
+
+
 
 
 .computer-buttons{
@@ -95,3 +112,52 @@
     }
 }
 
+
+.general-text{
+    @include pcandtb{
+        order: 2;
+        grid-row: 1/4;
+        grid-column: 2;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding: 5% 10%;
+        // padding-bottom: 5%;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.06);
+        
+        
+
+        h2{
+            font-size: 1.88rem;
+            font-family: $font-heading;
+            line-height: 1.27;
+            letter-spacing: 0.3px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            width: 80%;
+            @include reset;
+        }
+    }
+}
+
+.tittle{
+    h1{
+        font-size: 2.5rem;
+        font-family: $font-heading;
+        line-height: 1.27;
+        letter-spacing: 0.3px;
+
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.27;
+        letter-spacing: 0.3px;
+        text-align: left;
+    }
+    p{
+        margin-top: 1% ;
+        margin-bottom: 5%;
+    }
+}
