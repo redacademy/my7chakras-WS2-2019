@@ -45,8 +45,12 @@ h1{
 }
 
 h2{
+
     // width: 300px;
     font-family: Meticula;
+    font-size: 17px;
+    font-family: $font-main;
+    width: 300px;
     font-size: 15px;
     font-weight: normal;
     font-stretch: normal;
@@ -63,6 +67,7 @@ h2{
         text-align: left;
         color: #2f2f2f;
     }
+
 
 }
 
@@ -83,8 +88,8 @@ h6{
     width: 303px;
     height: 105px;
     opacity: 0.9;
-    font-family: Meticula;
     font-size: 15px;
+    font-family: $font-main;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -97,7 +102,10 @@ h6{
 }
 
 p{
+
     margin: auto;
+   font-size: 15px;
+   font-family: $font-main ;
     font-size: 17px;
     letter-spacing: normal;
     color: #3f3f3f;
@@ -109,6 +117,7 @@ p{
         text-align: left;
         color: #2f2f2f;
     }
+
 
 
 }
