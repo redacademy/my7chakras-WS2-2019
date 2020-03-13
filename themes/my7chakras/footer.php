@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer.
  *
@@ -7,42 +8,43 @@
 
 ?>
 
-			</div><!-- #content -->
+</div><!-- #content -->
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="site-info">
-					<div class="footer-titles"> 
-						
-							<h2> Subscribe to My Seven Chakras</h2>
-							<h3> Subscribe To Newsletter</h3>
-							<h4>Win Free E-book of Aj’s life</h4>
-						
-							<?php echo do_shortcode('[contact-form-7 id="14" title="Contact form 1"]')?>
-						
-					</div>
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="site-info">
+		<div class="footer-titles">
 
-					<div>
-						<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'Menu 2' ) ); ?>
+			<h2> Subscribe to My Seven Chakras</h2>
+			<h3> Subscribe To Newsletter</h3>
+			<h4>Win Free E-book of Aj’s life</h4>
 
-					</div>
+			<?php echo do_shortcode('[contact-form-7 id="14" title="Contact form 1"]') ?>
 
-					
-						<?php
-						dynamic_sidebar( 'sidebar-social' );
-						?> 
-				
+		</div>
+
+		<div>
+			<?php wp_nav_menu(array('theme_location' => 'secondary', 'menu_id' => 'Menu 2')); ?>
+
+		</div>
 
 
-					<div class="box-row copy-rights">
-						<p>Copyright 2020</p>
-						<p>Privacy Policy</p>
-					</div>
+		<?php
+		dynamic_sidebar('sidebar-social');
+		?>
 
-				</div><!-- .site-info -->
-			</footer><!-- #colophon -->
-		</div><!-- #page -->
 
-		<?php wp_footer(); ?>
 
-	</body>
+		<div class="box-row copy-rights">
+			<p>Copyright 2020</p>
+			<p>Privacy Policy</p>
+		</div>
+
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+
 </html>

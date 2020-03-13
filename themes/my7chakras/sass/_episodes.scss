@@ -243,6 +243,7 @@
         margin-bottom: 10px;
         @include spandtb{
         margin: 0;
+        font-size: 15px;
     }
     }
     &App{
@@ -252,7 +253,6 @@
                 padding: 5px 15px;
                 background-color: #ffffff;
                 box-shadow: $shadow;
-                margin: 0 10px;
                 align-items: center;
         }
         div{
@@ -280,5 +280,26 @@
             }
         }
     }
+}
+&__play{
+    padding: 5px 15px;
+    background-color: #ffffff;
+    box-shadow: $shadow;
+    margin: 0 10px 20px;
+    align-items: center;
+    border-radius: 10px;
+    button{
+        background: #ffffff;
+        border: none;
+        padding: 0;
+    }
+    &Toggle{
+        
+    }
+    &Skip{
+    img{
+        width: 30px;
+    }
+}
 }
 }

@@ -37,12 +37,13 @@ get_header(); ?>
 					</div>
 					<div class="episode__btn">
 						<div class="episode__btnPodcast">
-							<audio src="https://res.cloudinary.com/code-kitchen/video/upload/v1555038697/posts/zk5sldkxuebny7mwlhh3.mp3"></audio>
+							<?php $audio = get_field('audio'); ?>
+							<audio><?php echo $audio; ?></audio>
 							<h5>Stream Podcast</h5>
 							<div class="episode__play">
-								<button data-skip="-30" class="player__button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/replay-30.png" alt=""></button>
-								<button class="player__button toggle" title="Toggle Play"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/play-circle.png" alt=""></button>
-								<button data-skip="30" class="player__button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/forward-30.png" alt=""></button>
+								<button data-skip="-30" class="episode__playSkip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/replay-30.png" alt=""></button>
+								<button class="episode__playToggle" title="Toggle Play"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/play-circle.png" alt=""></button>
+								<button data-skip="30" class="episode__playSkip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/forward-30.png" alt=""></button>
 							</div>
 						</div>
 						<div class="episode__btnApp">
@@ -59,24 +60,11 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<div class="episode__heading">
-						<?php the_content(); ?>
-					</div>
 				</div>
 				<div class="post__text">
 					<p class="post__white post__white--top"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/white_top.svg" alt=""></p>
-					<div class="episode__question">
-						<h3>Featured Questions <span class="question">?</span><span class="colon">:</span></h3>
-						<ol>
-							<?php
-							if (post_custom('featured_questions')) {
-								$items = explode("\n", post_custom('featured_questions'));
-								foreach ($items as $value) {
-									echo '<li>' . $value . '</li>';
-								}
-							}
-							?>
-						</ol>
+					<div class="post__textWrapper">
+						<?php the_content(); ?>
 					</div>
 					<p class="post__white post__white--bottom"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/white_bottom.svg" alt=""></p>
 				</div>
@@ -133,7 +121,7 @@ get_header(); ?>
 							endforeach;
 							$args = array(
 								'post__not_in' => array($post->ID),
-								'posts_per_page' => 3,
+								'posts_per_page' => 6,
 								'category__in' => $category_ID,
 								'orderby' => 'rand',
 							);
@@ -143,24 +131,24 @@ get_header(); ?>
 							if ($query->have_posts()) :
 								while ($query->have_posts()) : $query->the_post(); ?>
 
-									<article class="related-post-sub">
+									<article class="post__relatedItem">
 										<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
-											<div class="blog__postImg">
+											<div class="post__relatedImg">
 												<?php if (has_post_thumbnail()) : ?>
 													<?php the_post_thumbnail('large'); ?>
 												<?php endif; ?>
-												<p class="blog__postNum">Episode <?php echo getPostThNumber() ?></p>
+												<p class="post__relatedNum">Episode <?php echo getPostThNumber() ?></p>
 											</div>
 										</a>
-										<div class="blog__postContent">
-											<div class="blog__postDay">
+										<div class="post__relatedContent">
+											<div class="post__relatedDay">
 												<?php echo get_the_date('F d'); ?>
 											</div>
-											<?php the_title(sprintf('<a href="%s" rel="bookmark" class="blog__postTitle"><h3>', esc_url(get_permalink())), '</h3></a>'); ?>
-											<p class="blog__postTag"><?php the_tags('', ' | '); ?></p>
-											<div class="blog__postExcerpt">
+											<?php the_title(sprintf('<a href="%s" rel="bookmark" class="post__relatedTitle"><h3>', esc_url(get_permalink())), '</h3></a>'); ?>
+											<div class="post__relatedExcerpt">
 												<?php the_excerpt(); ?>
 											</div>
+											<a href="<?php the_permalink(); ?>" class="post__relatedBtn">See more</a>
 										</div>
 									</article>
 
