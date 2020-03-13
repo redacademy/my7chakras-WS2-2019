@@ -1,39 +1,110 @@
-.bg-img {
+.about{
+    .bg-img {
     background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35.png);
-    height: 300px;
     background-repeat: no-repeat;
     background-position:right ;
+    width: 375px;
+    height: 285px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+
+    @include pcandtb{
+        width: 100%;
+        height: 339px;
+    }
 }
+
+
 
 h1{
     position: absolute;
     top: 200px;
+    
 }
 
 h2{
+
     font-size: 17px;
     font-family: $font-main;
+    width: 300px;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.06px;
+    text-align: left;
+    color: #212121;
+
+    @include pcandtb {
+        width: 731px;
+        font-size: 20px;
+        line-height: 1.65;
+        text-align: left;
+        color: #2f2f2f;
+    }
+
 
 }
 
 h3{
-
-
+    
+    height: 24px;
+    font-size: 22px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: 0.22px;
+    text-align: left;
+    color: #3f3f3f;
 }
 
 h6{
+    width: 303px;
+    height: 105px;
+    opacity: 0.9;
     font-size: 15px;
     font-family: $font-main;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.06px;
     text-align: center;
+    color: #212121;
+   
 }
 
 p{
+
    font-size: 15px;
    font-family: $font-main ;
+    font-size: 17px;
+    letter-spacing: normal;
+    color: #3f3f3f;
+
+    @include pcandtb {
+        width: 731px;
+        font-size: 20px;
+        line-height: 1.65;
+        text-align: left;
+        color: #2f2f2f;
+    }
+
 
 
 }
 
 figcaption{
     text-align: center;
+    height: 17px;
+    font-size: 17px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: 0.15px;
+    color: #3f3f3f;
+
+}
 }

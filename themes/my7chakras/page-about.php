@@ -12,7 +12,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<article id="post-<?php the_ID(); ?>" class="about">
 	<header class="entry-header">
 	<div class="bg-img"><h1>About <br> My Seven Chakras </h1></div>
 	</header><!-- .entry-header -->
@@ -61,7 +61,7 @@ Some exciting topics we’ve explored are chakras, energetic medicine &amp; heal
 <h6>We believe that transformation begins with some form of imperfect action. That first imperfect step can often build enough momentum to help us cross the finish line. </h6>
 
 <!-- wp:heading {"align":"center"} -->
-<h2 class="has-text-align-center">Here’s how I can support you at the moment</h2>
+<h3 class="has-text-align-center">Here’s how I can support you at the moment</h3>
 <!-- /wp:heading -->
 
 <!-- wp:image {"align":"center","id":25,"sizeSlug":"large"} -->
