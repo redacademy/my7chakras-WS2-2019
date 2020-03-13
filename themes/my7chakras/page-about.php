@@ -38,52 +38,67 @@ Some exciting topics we’ve explored are chakras, energetic medicine &amp; heal
 <h3 class="has-text-align-center">Our Values</h3>
 <!-- /wp:heading -->
 
+<div class="value-wrap">
 <!-- wp:image {"align":"center","id":17,"sizeSlug":"large"} -->
+<div class="row-one">
+<div class="eachvalue-wrap">
 <div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1082.png" alt="" class="wp-image-17"/><figcaption>Imagination </figcaption></figure></div>
-<!-- /wp:image -->
 <h6>Our imagination is more real than the physical reality around us. To transform our reality, all we need to do is impress upon our subconscious mind. </h6>
+</div>
 
 <!-- wp:image {"align":"center","id":33,"sizeSlug":"large"} -->
+<div class="eachvalue-wrap">
 <div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1090-1.png" alt="" class="wp-image-33"/><figcaption>Purpose</figcaption></figure></div>
-<!-- /wp:image -->
 <h6>It is our firm belief that you are here to fulfill a specific purpose. You already know your life’s divine purpose, all you have to do is remember what it is. </h6>
+</div>
 
-
+<div class="eachvalue-wrap">
 <div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1150.png" alt="" class="wp-image-33"/><figcaption>Heart</figcaption></figure></div>
 <h6>Love is the most powerful force in the Universe. Through kindness, unconditional love and gratitude, anything can be accomplished.</h6>
+</div>
 
+<div class="eachvalue-wrap">
 <div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1151.png" alt="" class="wp-image-33"/><figcaption>Oneness</figcaption></figure></div>
 <h6>The purpose of meditation is to still the mind and melt away the ego that keeps us separated and disconnected. Once we wake up, we realize how connected we truly are to everything around us.</h6>
+</div>
 
-<!-- wp:image {"align":"center","id":21,"sizeSlug":"large"} -->
+<div class="eachvalue-wrap">
 <div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1184.png" alt="" class="wp-image-21"/><figcaption>Action</figcaption></figure></div>
-<!-- /wp:image -->
 <h6>We believe that transformation begins with some form of imperfect action. That first imperfect step can often build enough momentum to help us cross the finish line. </h6>
+</div>
+</div>
+</span>
 
-<!-- wp:heading {"align":"center"} -->
 <h3 class="has-text-align-center">Here’s how I can support you at the moment</h3>
-<!-- /wp:heading -->
+<div class="support-wrap">
 
-<!-- wp:image {"align":"center","id":25,"sizeSlug":"large"} -->
-<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1152.png" alt="" class="wp-image-25"/><figcaption>Action Tribe Energy Circle</figcaption></figure></div>
-<!-- /wp:image -->
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1152.png" alt="" class="wp-image-25"/></figure></div>
+<div class="eachvalue-wrap">
+<figcaption>Action Tribe Energy Circle</figcaption>
 <h6>monthly subscription program where members receive transformational energy training from shamans, healers, yogis, mystics and intuitives</h6>
+</div>
 
-<!-- wp:image {"align":"center","id":27,"sizeSlug":"large"} -->
-<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1154.png" alt="" class="wp-image-27"/><figcaption>Podcasts</figcaption></figure></div>
-<!-- /wp:image -->
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1154.png" alt="" class="wp-image-27"/></figure></div>
+<div class="eachvalue-wrap">
+<figcaption>Podcasts</figcaption>
 <h6> listened to in over 150 countries and over 3.6 million downloads till date. Find your first or next episode here. </h6>
+</div>
 
-<!-- wp:image {"align":"center","id":35,"sizeSlug":"large"} -->
-<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1184.png" alt="" class="wp-image-35"/><figcaption>Sponsorship &amp; Collaboration</figcaption></figure></div>
-<!-- /wp:image -->
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1184.png" alt="" class="wp-image-35"/></figure></div>
+<div class="eachvalue-wrap">
+<figcaption>Sponsorship &amp; Collaboration</figcaption>
 <h6>monthly subscription program where members receive transformational energy training from shamans, healers, yogis, mystics and intuitives </h6>
+</div>
 
 
-<!-- wp:image {"align":"center","id":29,"sizeSlug":"large"} -->
-<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1188.png" alt="" class="wp-image-29"/><figcaption>Events, workshops &amp; retreats</figcaption></figure></div>
-<!-- /wp:image -->
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1188.png" alt="" class="wp-image-29"/></figure></div>
+<div class="eachvalue-wrap">
+<figcaption>Events, workshops &amp; retreats</figcaption>
 <h6> Coming soon! </h6>
+</div>
+</div>
 
 <!-- wp:paragraph -->
 <p></p>
