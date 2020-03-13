@@ -38,7 +38,7 @@ get_header(); ?>
 					<div class="episode__btn">
 						<div class="episode__btnPodcast">
 							<?php $audio = get_field('audio'); ?>
-							<audio><?php echo $audio; ?></audio>
+							<audio src="<?php echo esc_html($post->audio); ?>"></audio>
 							<h5>Stream Podcast</h5>
 							<div class="episode__play">
 								<button data-skip="-30" class="episode__playSkip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/replay-30.png" alt=""></button>
