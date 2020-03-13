@@ -12,7 +12,7 @@ h1{
 
 h2{
     font-size: 17px;
-    font-family: meticula;
+    font-family: $font-main;
 
 }
 
@@ -23,13 +23,13 @@ h3{
 
 h6{
     font-size: 15px;
-    font-family: meticula;
+    font-family: $font-main;
     text-align: center;
 }
 
 p{
    font-size: 15px;
-   font-family: meticula ;
+   font-family: $font-main ;
 
 
 }

@@ -79,10 +79,13 @@ font-family: $font-main !important;
    }
 
    .subscription{
-    
+    display: flex;
     @include pcandtb{
-
     }
+   }
+
+   .wpcf7-form{
+    justify-content: center;
    }
     
 }
@@ -116,6 +119,20 @@ font-family: $font-main !important;
           
         }
     }
+
+    .copy-rights{
+        p{
+
+            font-size: .6rem;
+        }
+        @include pcandtb{
+            p{
+
+                font-size: 1rem;
+            }
+
+            }
+        }
 }
 
 
@@ -140,10 +157,5 @@ font-family: $font-main !important;
     
 }
 
-.copy-rights{
-font-size: .6rem;
-@include pcandtb{
-    font-size: 1rem;
-    }
-}
+
 
