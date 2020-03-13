@@ -37,12 +37,13 @@ get_header(); ?>
 					</div>
 					<div class="episode__btn">
 						<div class="episode__btnPodcast">
-							<audio src="https://res.cloudinary.com/code-kitchen/video/upload/v1555038697/posts/zk5sldkxuebny7mwlhh3.mp3"></audio>
+							<?php $audio = get_field('audio'); ?>
+							<audio><?php echo $audio; ?></audio>
 							<h5>Stream Podcast</h5>
 							<div class="episode__play">
-								<button data-skip="-30" class="player__button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/replay-30.png" alt=""></button>
-								<button class="player__button toggle" title="Toggle Play"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/play-circle.png" alt=""></button>
-								<button data-skip="30" class="player__button"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/forward-30.png" alt=""></button>
+								<button data-skip="-30" class="episode__playSkip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/replay-30.png" alt=""></button>
+								<button class="episode__playToggle" title="Toggle Play"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/play-circle.png" alt=""></button>
+								<button data-skip="30" class="episode__playSkip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/forward-30.png" alt=""></button>
 							</div>
 						</div>
 						<div class="episode__btnApp">
@@ -62,8 +63,9 @@ get_header(); ?>
 				</div>
 				<div class="post__text">
 					<p class="post__white post__white--top"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/white_top.svg" alt=""></p>
-					<?php the_content(); ?>
-
+					<div class="post__textWrapper">
+						<?php the_content(); ?>
+					</div>
 					<p class="post__white post__white--bottom"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/white_bottom.svg" alt=""></p>
 				</div>
 				<div class="post__footer">

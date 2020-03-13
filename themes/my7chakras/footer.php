@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer.
  *
@@ -7,50 +8,51 @@
 
 ?>
 
-			</div><!-- #content -->
+</div><!-- #content -->
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="site-info">
-					<div class="footer-titles"> 
-						
-							<h2> Subscribe to My Seven Chakras</h2>
-							<h3> Subscribe To Newsletter</h3>
-							<h4>Win Free E-book of Aj’s life</h4>
-						
-							<?php echo do_shortcode('[contact-form-7 id="14" title="Contact form 1"]')?>
-						
-					</div>
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="site-info">
+		<div class="footer-titles">
 
-					<div>
+			<h2> Subscribe to My Seven Chakras</h2>
+			<h3> Subscribe To Newsletter</h3>
+			<h4>Win Free E-book of Aj’s life</h4>
 
-					
-					<ul>
+			<?php echo do_shortcode('[contact-form-7 id="14" title="Contact form 1"]') ?>
 
-					 <li><a href="">Home</a></li>
-					 <li><a href="">Podcast</a></li>
-					 <li><a href="">Action Tribe Energy Circle</a></li>
-					 <li><a href="">Contact</a></li>
-					
-					</ul>
-					</div>
+		</div>
 
-					
-						<?php
-						dynamic_sidebar( 'sidebar-social' );
-						?> 
-				
+		<div>
 
 
-					<div class="box-row copy-rights">
-						<p>Copyright 2020</p>
-						<p>Privacy Policy</p>
-					</div>
+			<ul>
 
-				</div><!-- .site-info -->
-			</footer><!-- #colophon -->
-		</div><!-- #page -->
+				<li><a href="">Home</a></li>
+				<li><a href="">Podcast</a></li>
+				<li><a href="">Action Tribe Energy Circle</a></li>
+				<li><a href="">Contact</a></li>
 
-		<?php wp_footer(); ?>
+			</ul>
+		</div>
 
-	</body>
+
+		<?php
+		dynamic_sidebar('sidebar-social');
+		?>
+
+
+
+		<div class="box-row copy-rights">
+			<p>Copyright 2020</p>
+			<p>Privacy Policy</p>
+		</div>
+
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
+
 </html>

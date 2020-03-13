@@ -243,6 +243,9 @@
                     position: relative;
                     padding: 70px 10px 120px;
                 }
+                &Wrapper{
+                    @include content-wrapper;
+                }
             }
             &__white{
                 display: none;
@@ -256,13 +259,13 @@
                     display: block;
                 }
                 &--top{
-                    width: 100.3%;
+                    width: 100.2%;
                     top: -1px;
                     left: 0;
                 }
                 &--bottom{
                     bottom: -2px;
-                    width: 100.3%;
+                    width: 100%;
                     left: 0;
                 }
             }

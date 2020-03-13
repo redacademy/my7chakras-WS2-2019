@@ -1,4 +1,16 @@
+
+
 $(function () {
+    $(function () { // if document is ready
+        alert('jQuery is ready.')
+    });
+
+    $('.post__relatedList').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true
+    });
+
     // Add position absolute to elements with sub-menu
     let menuItems = $('#primary-menu li');
     menuItems.each(function () {
@@ -90,7 +102,6 @@ $(function () {
     });
 
 
-
     $('#aj-button').on('click', function () {
         $('.contact-gi').hide();
         $('.contact-aj').show();
@@ -99,16 +110,5 @@ $(function () {
     });
 
 
-    /**
-     * Carousel
-     */
-    $('.post__relatedList').flickity({
-        // options
-        cellAlign: 'left',
-        contain: true
-    });
 
-    $(function () { // if document is ready
-        console.log('jQuery is ready.')
-    });
 });
