@@ -189,9 +189,11 @@ fieldset{
 
 .close-icon{
     .icon-menu:after{
-
+        
+        font-size: 2.5rem;
         content: "-";
         @include pcandtb{
+            font-size: 1.2rem;
             transition: 1s all;
             content: ">";
             transform: rotate(90deg);
@@ -201,6 +203,11 @@ fieldset{
 
 
 
+.search-bar{
+
+    height: fit-content;
+    margin-bottom: 10%;
+}
 
 
 

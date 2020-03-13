@@ -22,16 +22,8 @@
 					</div>
 
 					<div>
+						<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'Menu 2' ) ); ?>
 
-					
-					<ul>
-
-					 <li><a href="">Home</a></li>
-					 <li><a href="">Podcast</a></li>
-					 <li><a href="">Action Tribe Energy Circle</a></li>
-					 <li><a href="">Contact</a></li>
-					
-					</ul>
 					</div>
 
 					
