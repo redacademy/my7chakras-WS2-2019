@@ -10,7 +10,6 @@ menuItems.each(function(){
     }
 });
 
-
 // Sub menu animation
 
 $('.sub-menu').hide()
