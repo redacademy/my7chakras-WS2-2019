@@ -1,5 +1,40 @@
 .aboutaj{
 
+    .aj-hidesktop {
+        display: none;
+
+        @include pcandtb{
+            display: block;
+
+        }
+    }
+    .aj-desktop{
+        display: none;
+
+        @include pcandtb{
+            display: block;
+
+        }
+
+    }
+    .aj{
+        width: 167px;
+        height: 202px;
+        object-fit: contain;
+        position: absolute;
+        margin-left: 201px;
+        margin-top: -226px;
+
+    @include pcandtb{
+    width: 290px;
+    height: 339px;
+    position: absolute;
+    margin-top: -363px;
+    margin-left: 1128px;
+    
+    }
+}
+
     .bg-img {
         background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35.png);
         background-repeat: no-repeat;
@@ -24,7 +59,8 @@
     }
 
 h1{
-    position: absolute;
+   
+    padding-left: 23px;
     top: 170px;
     width: 194px;
     height: 76px;
@@ -61,12 +97,17 @@ h1{
 }
 
 .gradient-box{
-    height: 466.1px;
-    background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(122deg, #2f41a4 -58%, #323184 -18%, #4d449c 14%, #915990 46%, #ac5f80 79%, #ac5d5b 113%);
+    height: auto;
+    background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Path-870.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
 }
+
 img{
     width: 254px;
 }
+
 
 h6{
    
@@ -79,7 +120,7 @@ h6{
     color: #ffffff;
 }
 
-h3{
+h4{
     bottom: 400px;
     position: absolute;
     width: 185px;
@@ -93,6 +134,10 @@ h3{
     letter-spacing: 0.06px;
     text-align: left;
     color: #212121;
+
+    @include pcandtb {
+        display: none;
+}
 }
 
 p{
