@@ -57,14 +57,19 @@
 				<div class="clear"></div>
 	</div>
 
+				
 
+				<button href="#masthead" class="sticky-button">
+					<img  src= "<?php echo get_template_directory_uri();?>/assets/logo/slide-button.svg" alt="logo">
 
+				</button>
 
+	</header>
 
-	</header><!-- #masthead -->
 
 	<div class="search-bar hide">
 		<?php get_search_form(); ?>
 	</div>
 
 	<div id="content" class="site-content">
+

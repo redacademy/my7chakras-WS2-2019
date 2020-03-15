@@ -1,0 +1,304 @@
+.front-page{
+
+// -----------------------------
+    
+    .learn-more{
+        @include color-gradient;
+        color: $white;
+        padding: 5% 5%;
+        text-align: center;
+       
+        @include box-column;
+        justify-content: space-between;
+        
+        a{
+            padding: 7% 33% ;
+            color: $white;
+            border-radius: 4px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+            background-color: $purple;
+            font-size: 17px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.76;
+            letter-spacing: normal;
+            text-align: center;
+            @include pcandtb{
+                padding: 1% 13% ;
+            }
+        }
+        p{
+            @include pcandtb{
+                font-size: 2rem;
+            }
+        }
+        p:nth-last-of-type(2){
+            margin-bottom: 25%;
+            @include pcandtb{
+                @include reset;
+                width: 70%;
+                margin: 2% auto;
+            }
+    
+        }
+    }
+
+
+
+// -----------------------------
+
+
+
+    .init-front{
+        display: flex;
+        flex-wrap: wrap;
+        background-image: url("../../assets/logo/leaves.svg");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        @include pcandtb{
+        background-size: 50%;
+        padding-top: 3%;
+        }
+
+        div{
+            width: 55%;
+            padding: 5%;
+            padding-right: 0%;
+            @include pcandtb{
+                padding-left: 10%;
+
+            }
+        }
+
+        figure{
+            @include reset;
+            width: 45%;
+            position: relative;
+
+            img{
+                position: absolute;
+                bottom: 0;
+                height: 82%;
+                width: auto;
+                right: 20px;
+
+                @include pcandtb{
+                    height: 450px;
+                    right: 35%;
+                }
+            }
+        }
+
+        h1{
+            font-size: 1.375rem;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.14;
+            letter-spacing: 0.22px;
+            @include pcandtb{
+                font-size: 3.435rem;
+                @include reset;
+                line-height: 1.18;
+                letter-spacing: 0.22px;
+                padding-bottom: 2%;
+
+            }
+        }
+
+        }
+   
+// -----------------------------
+
+
+    .info-front{
+        @include color-gradient;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2%;
+        p{
+            width: 35%;
+            color: $white;
+            font-size: 1.375rem;
+            line-height: 1.06;
+            letter-spacing: -0.61px;
+            span{
+                font-size: 2rem;
+                @include pcandtb{
+                    font-size: unset;
+                }
+            }
+            @include pcandtb{
+            width: 23%;
+
+                font-size: 3.4375rem;
+            }
+        }
+        p:last-child{
+            display: none;
+            @include pcandtb{
+                width: 31%;
+                display: unset;
+            }
+        }
+    }
+
+// -----------------------------
+
+    .about-front{
+        @include box-column ;
+        width: 90%;
+        margin: 5% auto;
+        justify-content: center;
+        align-content: center;
+        h1{
+            width: 100%;
+        }
+        @include pcandtb{
+            @include box-row;
+            flex-wrap: wrap;
+            p{
+                @include reset;
+                width: 45%;
+            }
+
+            figure{
+                @include reset;
+            
+            }
+            h1{
+                text-align: center;
+            }
+        }
+     
+    }
+        // ----------------------------------
+
+
+    h1{
+        font-size: 1.375rem;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.14;
+        letter-spacing: 0.22px;
+        @include pcandtb{
+            font-size: 3.435rem;
+            @include reset;
+            line-height: 1.18;
+            letter-spacing: 0.22px;
+            padding-bottom: 2%;
+
+        }
+    }
+
+    p{
+            
+        @include pcandtb{
+            @include reset;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            font-size: 1.25rem;
+            letter-spacing: -0.3px;
+            line-height: 1.75;
+
+        }
+        // ----------------------------------
+}
+
+    .meet-host{
+        width: 90%;
+        margin: 5% auto;
+        h1{
+            text-align: center;
+            @include pcandtb{
+                width: 100%;
+            }
+        }
+        figure{
+        background-image: url("../../assets/logo/leaves2.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        align-items: center;
+        display: flex;
+        margin: unset;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+            img{
+               margin: auto;
+                height: auto;
+                width: 158px;
+                @include pcandtb{
+                    width: 270px;
+                }
+            }
+                    @include pcandtb{
+                        width: 383px;
+                        height: 403px;
+                    }
+        }
+        .link-about{
+            text-align: end;
+        }
+
+        @include pcandtb{
+            @include box-row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        div{
+            
+            @include pcandtb{
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+                justify-content: center;
+            }
+    
+        }
+    }
+
+// -------------------------
+
+.testimonials{
+    width: 90%;
+    margin: 5% auto;
+    
+
+    h1{
+        text-align: center;
+    }
+
+    .comments-container{
+        @include box-column;
+        .author{
+            text-align: end;
+
+        }
+
+        div{
+        background-image: url("../../assets/logo/leaves-commnets.svg");
+        width: 95%;
+        background-position-x: -28%;
+        background-position-y: 150%;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        }
+        
+        @include pcandtb{
+            @include box-row;
+
+            p:nth-last-of-type(2){
+                padding: 10%;
+            }
+        }
+    }
+
+
+}
+
+}
