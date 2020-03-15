@@ -36,6 +36,7 @@ plugins/*
 !plugins/yet-another-related-posts-plugin
 !plugins/wp-postviews
 !plugins/red-functionality
+!plugins/wordpress-importer
 
 
 
