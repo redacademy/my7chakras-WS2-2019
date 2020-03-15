@@ -16,14 +16,10 @@ get_header(); ?>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes_heading.png" alt="heading flower">
             </div>
 
-            <h2>Episodes</h2>
+            <?php get_template_part('searchform-articles'); ?>
 
             <div class="episodes__info">
-                <?php
-                $count_posts = wp_count_posts();
-                $publish_posts = $count_posts->publish;
-                echo '<p>' . $publish_posts . ' Result(s)</p>';
-                ?>
+                <div></div>
                 <ul class="episodes__sort">
                     <li>
                         <p>Sorted: Newest to oldest</p>
