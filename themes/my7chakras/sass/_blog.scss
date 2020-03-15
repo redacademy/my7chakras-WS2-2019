@@ -313,17 +313,12 @@
                 font-size: 17px;
             }
         }
-        &__relatedList{
-            // display: flex;
-            // justify-content: space-between;
-        }
         &__related{
             &Item{
             border-radius: 10px;
             box-shadow: $shadow;
             display: flex;
             justify-content: space-between;
-            margin-bottom: 30px;
             background: #fff;
             margin-bottom: 40px;
             flex-direction: column;
@@ -332,6 +327,9 @@
             }
             @include spandtb{
                 width: 100%;
+            }
+            .carousel-cell{
+                width: 33%;
             }
         }
             &Img{
@@ -386,9 +384,9 @@
                 }
             }
             &Content{
-                width: 70%;
-                    padding: 10px 10px 20px;
                     width: 100%;
+                    padding: 10px 10px 20px;
+                    height: 30vh;
             }
             &Excerpt{
                 margin-bottom: 40px;
