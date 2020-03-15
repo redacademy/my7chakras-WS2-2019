@@ -32,6 +32,7 @@ get_header(); ?>
             </div>
 
             <h2>Episodes</h2>
+            <?php get_search_form(); ?>
 
             <div class="episodes__info">
                 <?php
