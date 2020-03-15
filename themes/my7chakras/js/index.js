@@ -1,10 +1,4 @@
 $(function () {
-    $('.post__relatedList').flickity({
-        // options
-        cellAlign: 'left',
-        contain: true
-    });
-
     // Add position absolute to elements with sub-menu
     $('.sub-menu').hide()
     let menuItems = $('#primary-menu li');

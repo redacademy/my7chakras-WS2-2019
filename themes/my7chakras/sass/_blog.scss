@@ -324,8 +324,6 @@
             flex-direction: column;
             @include pc{
                 width: 30%;
-                margin-right: 10px;
-                margin-left: 10px;
             }
             @include spandtb{
                 width: 100%;
@@ -386,7 +384,7 @@
                 }
             }
             &Content{
-                    width: 70%;
+                    width: 100%;
                     padding: 10px 10px 20px;
                     height: 30vh;
             }
