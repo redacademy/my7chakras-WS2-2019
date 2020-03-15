@@ -12,23 +12,8 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
         <div class="episodes__wrapper">
             <div class="episodes__heading">
-                <h1>My Seven Chakras <br>Podcast Episode</h1>
+                <h1>Enlighten Yourself With Inner Knowledge </h1>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes_heading.png" alt="heading flower">
-            </div>
-
-            <div class="episodes__categories">
-                <a href="" class="episodes__category">
-                    <p>Personal Growth,<br>Purpose & Career</p>
-                </a>
-                <a href="" class="episodes__category">
-                    <p>Health & <br>Spirituality</p>
-                </a>
-                <a href="" class="episodes__category">
-                    <p>Love & <br>Relationships</p>
-                </a>
-                <a href="" class="episodes__category">
-                    <p>Energy Medicine, <br>Chakras & Healing</p>
-                </a>
             </div>
 
             <h2>Episodes</h2>
