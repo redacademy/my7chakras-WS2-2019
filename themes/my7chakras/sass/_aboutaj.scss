@@ -1,5 +1,40 @@
 .aboutaj{
 
+    .aj-hidesktop {
+        display: none;
+
+        @include pcandtb{
+            display: block;
+
+        }
+    }
+    .aj-desktop{
+        display: none;
+
+        @include pcandtb{
+            display: block;
+
+        }
+
+    }
+    .aj{
+        width: 167px;
+        height: 202px;
+        object-fit: contain;
+        position: absolute;
+        margin-left: 201px;
+        margin-top: -226px;
+
+    @include pcandtb{
+    width: 290px;
+    height: 339px;
+    position: absolute;
+    margin-top: -363px;
+    margin-left: 1128px;
+    
+    }
+}
+
     .bg-img {
         background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35.png);
         background-repeat: no-repeat;
@@ -11,13 +46,21 @@
         background-color: #ffffff;
     
         @include pcandtb{
+            background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35@2x.png);
+            background-repeat: no-repeat;
+            background-position: 100% 96%;
+            padding-top: 90px;
+            height: 403px;
             width: 100%;
-            height: 339px;
+            object-fit: contain;
+            
+           
         }
     }
 
 h1{
-    position: absolute;
+   
+    padding-left: 23px;
     top: 170px;
     width: 194px;
     height: 76px;
@@ -53,7 +96,31 @@ h1{
     
 }
 
-h3{
+.gradient-box{
+    height: auto;
+    background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Path-870.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+img{
+    width: 254px;
+}
+
+
+h6{
+   
+    font-family: MazzardH-Bold-H;
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+h4{
     bottom: 400px;
     position: absolute;
     width: 185px;
@@ -67,6 +134,10 @@ h3{
     letter-spacing: 0.06px;
     text-align: left;
     color: #212121;
+
+    @include pcandtb {
+        display: none;
+}
 }
 
 p{

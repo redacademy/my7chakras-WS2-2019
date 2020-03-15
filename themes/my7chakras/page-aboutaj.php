@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<article id="post-<?php the_ID(); ?>" class="aboutaj">
 	<header class="entry-header">
-	<div class="bg-img"><h1>About <br> the Host </h1></div>
+	<div class="bg-img"><h1><span class="head-about">About</span> the Host </h1></div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -32,5 +32,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

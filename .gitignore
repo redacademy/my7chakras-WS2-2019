@@ -53,3 +53,4 @@ themes/my7chakras/node_modules/*
 # ================== #
 themes/my7chakras/gulpfile.js
 themes/my7chakras/build/*
+!themes/my7chakras/build/js/flickity.pkgd.min.js
