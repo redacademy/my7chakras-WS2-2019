@@ -24,10 +24,21 @@
 
 
 .support-wrap{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    padding-top: 25px;
+
+    @include pcandtb{
+
     display: flex;
     flex-wrap: wrap;
     width: 85%;
     margin: auto;
+    padding-top: 25px;
+}
 }
 
 
@@ -49,17 +60,18 @@ h2{
     // width: 300px;
     font-family: Meticula;
     font-size: 17px;
+    padding-top: 50px;
     font-family: $font-main;
-    width: 300px;
-    font-size: 15px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
+    padding-bottom: 25px;
     line-height: 1.47;
     letter-spacing: 0.06px;
     text-align: left;
     color: #212121;
     margin: auto;
+
     @include pcandtb {
         width: 731px;
         font-size: 20px;
@@ -106,6 +118,7 @@ p{
     margin: auto;
    font-size: 15px;
    font-family: $font-main ;
+   padding-bottom: 25px;
     font-size: 17px;
     letter-spacing: normal;
     color: #3f3f3f;
@@ -131,12 +144,21 @@ figcaption{
     font-size: 17px;
     font-stretch: normal;
     font-style: normal;
+    padding-bottom: 28px;
     line-height: 1.18;
     letter-spacing: 0.15px;
     color: #3f3f3f;
     display: block!important;
-
 }
+
+.img-support{
+    text-align: center;
+
+    @include sp {
+        position: relative;
+        margin-left: 115px;
+    }
+} 
 .entry-content{
     @include content-wrapper;
 }
@@ -144,6 +166,7 @@ figcaption{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 50px;
 }
 .eachvalue-wrap{
     margin: 20px;
