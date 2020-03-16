@@ -15,9 +15,58 @@ get_header(); ?>
 				<?php the_content( 'template-parts/content', 'page' ); ?>
 
 			<?php endif; // End of the loop. ?>
+				<div>
 
-		</main><!-- #main -->
-	</div>
+					<h1 class='feature'>Feature Episodes</h1>
+				
+				<div class ="feature-episodes">
+					
+					<?php
+						$args = array( 'post_type' => 'post', 'numberposts' => '3' );
+						$posts = get_posts( $args ); // returns an array of posts
+					?>
+					<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+					
+						<a class ="card-container" href="<?php echo get_permalink(); ?>">
+								<div class="image-card">
+									<img class = "wp-post-image" src = "<?php echo get_the_post_thumbnail_url(); ?>">
+									<div> <?php echo trim(explode('|',get_the_title(),2)[1]);?></div>
+
+								</div>
+								<p>
+									<?php
+									$date = new DateTime(get_the_date());
+									echo $date->format('F dS');
+									$tags = get_tags();
+									?>
+								</p>
+								
+								<h1><?php echo trim(explode('|',get_the_title(),2)[0]);?></h1>
+								
+								<p>	<?php echo wp_trim_words( get_the_content(), $num_words = 25);?> </p>
+<!-- 
+								<ul>
+										<?php
+										
+										if ( $tags ) :
+											foreach ( $tags as $tag ) : ?>
+												<li><a href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>" title="<?php echo esc_attr( $tag->name ); ?>"><?php echo esc_html( $tag->name ); ?></a></li>
+											<?php endforeach; ?>
+										<?php endif; ?>
+									</ul> -->
+
+								<p class= "more">See more ></p>	
+
+							
+						</a>
+
+				<?php endforeach; wp_reset_postdata(); ?>
+
+				</div>
+
+				</div>
+		</div>
+	</main><!-- #main -->
 	</div><!-- #primary -->
 
 
@@ -97,3 +146,5 @@ Over the last 5 years and after garnering 3.6+ million downloads, AJ has intervi
 	</div>
 
 </div> -->
+
+

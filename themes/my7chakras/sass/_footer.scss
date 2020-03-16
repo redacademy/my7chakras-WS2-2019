@@ -81,6 +81,7 @@ font-family: $font-main !important;
    .subscription{
     display: flex;
     @include pcandtb{
+        
     }
    }
 
@@ -93,6 +94,7 @@ font-family: $font-main !important;
 .subscription{
     p{
         @include box-row;
+        width: 100%;
         justify-content: center;
     }
 }

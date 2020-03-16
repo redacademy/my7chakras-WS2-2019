@@ -1,15 +1,109 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
 .front-page{
+    @include box-column;
 
+    .feature{
+    @include reset
+
+        margin: 0% 5%;
+    }
 // -----------------------------
+    .feature-episodes{
+        order: 1;
+    @include box-column;
+
+
+    .card-container{
+        width: 90%;
+        margin: 5% auto;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        p{
+            padding: 2% 5%;
+            line-height: 1.18;
+        }
+
+        h1{
+            @include reset;
+            padding: 0% 5%;
+            font-size: 1.05rem;
+            line-height: 1.18;
+            letter-spacing: 0.15px;
+        }
+
+        .more{
+            padding: 2%;
+            text-align: end;
+
+        }
+        .image-card{
+            position: relative;
+            div{
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                padding: 3%;
+                opacity: 0.8;
+                background-color: #d8d8d8;
+                color: $purple;
+                border-radius: 3px;
+             
+
+            }
+        }
+
+        @include pcandtb{
+            width: 25%;
+            h1{
+                @include reset;
+                padding: 0% 5%;
+                font-size: 20px;
+                font-size: 1.5rem;
+                line-height: 1.1;
+                letter-spacing: normal;
+            }
+        }
+
+    }
+
+    @include pcandtb{
+        @include box-row;
+
+        .card-container:hover{
+            transition: all 1s;
+            width: 25.5%;
     
+    
+        }
+
+    }
+
+    }
     .learn-more{
-        @include color-gradient;
-        color: $white;
-        padding: 5% 5%;
+        order: 2;
+        @include pcandtb{
+
+            background-image: url("../../assets/logo/background.svg");
+            height: unset;
+            background-size: cover;
+            background-position-y: unset;
+            background-position-x: unset;
+            height: 50vw;
+
+        }
+        // @include color-gradient;
+        background-image: url(../../assets/logo/background-phone.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        padding: 5%;
         text-align: center;
-       
-        @include box-column;
-        justify-content: space-between;
+        background-position-y: 7px;
+        background-position-x: -150px;
+        height: 57vh;
+
         
         a{
             padding: 7% 33% ;
@@ -41,6 +135,15 @@
                 margin: 2% auto;
             }
     
+        }
+        h1{
+            margin-top: 15%;
+
+            @include pcandtb{
+                margin-top: 3%;
+
+                font-size: 3.4375rem;
+            }
         }
     }
 
@@ -186,7 +289,7 @@
         line-height: 1.14;
         letter-spacing: 0.22px;
         @include pcandtb{
-            font-size: 3.435rem;
+            font-size: 1.875rem;
             @include reset;
             line-height: 1.18;
             letter-spacing: 0.22px;
@@ -212,7 +315,8 @@
 
     .meet-host{
         width: 90%;
-        margin: 5% auto;
+        margin: auto;
+        order: 3;
         h1{
             text-align: center;
             @include pcandtb{
@@ -267,6 +371,7 @@
 .testimonials{
     width: 90%;
     margin: 5% auto;
+    order: 4;
     
 
     h1{

@@ -97,6 +97,8 @@
     display: none;
     width: 100%;
     height: fit-content;
+    z-index: 999;
+
 
     @include pcandtb{
         display: unset;
@@ -223,7 +225,12 @@ fieldset{
   right: 5%;
   bottom: 10%;
   border: none;
+  z-index: 999;
  @include pcandtb{
      display: none;
  }
+}
+
+#masthead{
+    outline: none;
 }
