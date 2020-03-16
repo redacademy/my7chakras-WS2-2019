@@ -5,9 +5,8 @@
     @include box-row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 2%;
+    padding-top: 0.5%;
     align-items: center;
-    padding-bottom: 10%;
 
     @include pcandtb{
         padding-bottom: unset;
@@ -98,6 +97,8 @@
     display: none;
     width: 100%;
     height: fit-content;
+    z-index: 999;
+
 
     @include pcandtb{
         display: unset;
@@ -214,4 +215,22 @@ fieldset{
 
 .change-color{
     opacity: 0.5;
+}
+
+
+.sticky-button{
+    @include reset;
+    position: fixed;
+  background: none;
+  right: 5%;
+  bottom: 10%;
+  border: none;
+  z-index: 999;
+ @include pcandtb{
+     display: none;
+ }
+}
+
+#masthead{
+    outline: none;
 }

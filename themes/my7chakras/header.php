@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -57,14 +57,21 @@
 				<div class="clear"></div>
 	</div>
 
+				
+				<a href="#masthead">
 
+					<button class="sticky-button">
+						<img  src= "<?php echo get_template_directory_uri();?>/assets/logo/slide-button.svg" alt="logo">
+						
+					</button>
+				</a>
 
+	</header>
 
-
-	</header><!-- #masthead -->
 
 	<div class="search-bar hide">
 		<?php get_search_form(); ?>
 	</div>
 
 	<div id="content" class="site-content">
+

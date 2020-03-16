@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="704.494" height="472.501" viewBox="0 0 704.494 472.501">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.078" y1="0.139" x2="1.116" y2="0.931" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2f41a4"/>
+      <stop offset="0.069" stop-color="#323184"/>
+      <stop offset="0.224" stop-color="#4d449c"/>
+      <stop offset="0.554" stop-color="#915990"/>
+      <stop offset="0.799" stop-color="#ac5f80"/>
+      <stop offset="1" stop-color="#ac5d5b"/>
+    </linearGradient>
+  </defs>
+  <g id="stars_effect" data-name="stars effect" transform="translate(118.583 -2477.884)">
+    <path id="Path_870" data-name="Path 870" d="M2353.144,7443.865s144.706-99.93,297.876-71.011,280.8,55.036,357.019,15.147,41.867,250.072,41.959,375.647-214.642,19.732-385.273,0-311.581,76.454-311.581,76.454Z" transform="translate(-2471.727 -4889.718)" fill="url(#linear-gradient)"/>
+    <path id="Path_874" data-name="Path 874" d="M2353.144,7443.865s144.706-99.93,297.876-71.011,280.8,55.036,357.019,15.147,41.867,250.072,41.959,375.647-214.642,19.732-385.273,0-311.581,76.454-311.581,76.454Z" transform="translate(-2471.727 -4889.718)" fill="rgba(63,63,63,0.3)"/>
+  </g>
+</svg>
