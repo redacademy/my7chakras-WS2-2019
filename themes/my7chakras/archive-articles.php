@@ -39,7 +39,6 @@ get_header(); ?>
                                 <?php if (has_post_thumbnail()) : ?>
                                     <?php the_post_thumbnail('large'); ?>
                                 <?php endif; ?>
-                                <p class="blog__postNum">Episode <?php echo getPostThNumber() ?></p>
                             </div>
                             <div class="blog__postContent">
                                 <div class="blog__postDay">
