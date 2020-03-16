@@ -72,28 +72,28 @@ Some exciting topics we’ve explored are chakras, energetic medicine &amp; heal
 <h3 class="has-text-align-center">Here’s how I can support you at the moment</h3>
 <div class="support-wrap">
 
-<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1152.png" alt="" class="wp-image-25"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter size-large"><img class="img-support" src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1152.png" alt="" class="wp-image-25"/></figure></div>
 <div class="eachvalue-wrap">
 <figcaption>Action Tribe Energy Circle</figcaption>
 <h6>monthly subscription program where members receive transformational energy training from shamans, healers, yogis, mystics and intuitives</h6>
 </div>
 
 
-<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1154.png" alt="" class="wp-image-27"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter size-large"><img class="img-support" src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1154.png" alt="" class="wp-image-27"/></figure></div>
 <div class="eachvalue-wrap">
 <figcaption>Podcasts</figcaption>
 <h6> listened to in over 150 countries and over 3.6 million downloads till date. Find your first or next episode here. </h6>
 </div>
 
 
-<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1184.png" alt="" class="wp-image-35"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter size-large"><img class="img-support" src="http://localhost/my7chakras/wp-content/uploads/2020/02/Group-1184.png" alt="" class="wp-image-35"/></figure></div>
 <div class="eachvalue-wrap">
 <figcaption>Sponsorship &amp; Collaboration</figcaption>
 <h6>monthly subscription program where members receive transformational energy training from shamans, healers, yogis, mystics and intuitives </h6>
 </div>
 
 
-<div class="wp-block-image"><figure class="aligncenter size-large"><img src="http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1188.png" alt="" class="wp-image-29"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter size-large"><img class="img-support" src="http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1188.png" alt="" class="wp-image-29"/></figure></div>
 <div class="eachvalue-wrap">
 <figcaption>Events, workshops &amp; retreats</figcaption>
 <h6> Coming soon! </h6>

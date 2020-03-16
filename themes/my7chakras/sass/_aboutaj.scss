@@ -17,6 +17,8 @@
         }
 
     }
+
+
     .aj{
         width: 167px;
         height: 202px;
@@ -97,15 +99,42 @@ h1{
 }
 
 .gradient-box{
-    height: auto;
-    background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Path-870.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    overflow: hidden;
+
+        background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/ABOUT@2x.png);
+        background-repeat: no-repeat;
+        background-size: 129%;
+        width: 170%;
+        background-position: -43px 1px;
+
+
+        @include pcandtb{
+
+            height: 622px;
+            background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/ABOUT@2x.png);
+            background-repeat: no-repeat;
+            background-size: 110%;
+            width: 100%;
+            overflow: hidden;
+            background-position: 0px 12px;
+                }
 }
 
-img{
+.aj2{
+
+    overflow: hidden;
+    position: relative;
+    margin-top: -151px;
+    margin-left: 70px;
+
+    @include pcandtb {
+
     width: 254px;
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -45px;
+    overflow: hidden;
+    }
+
 }
 
 
