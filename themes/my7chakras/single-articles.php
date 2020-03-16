@@ -38,7 +38,9 @@ get_header(); ?>
                 </div>
                 <div class="post__text">
                     <p class="post__white post__white--top"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/white_top.svg" alt=""></p>
-                    <?php the_content(); ?>
+                    <div class="post__textWrapper">
+                        <?php the_content(); ?>
+                    </div>
                     <p class="post__white post__white--bottom"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog/white_bottom.svg" alt=""></p>
                 </div>
                 <div class="post__footer">
