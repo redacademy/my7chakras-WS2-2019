@@ -1,11 +1,22 @@
-const audio = document.getElementsByTagName("audio")[0]
-const playButton = document.getElementById("play")
-const stopButton = document.getElementById("stop")
+let music = new Audio();
+function init() {
+  music.preload = 'auto';
+  music.load();
 
-playButton.addEventListener('click', () => {
-  audio.play()
-})
+  music.addEventListener('ended', function () {
+    music.currentTime = 0;
+    music.play();
+  }, false);
+}
 
-stopButton.addEventListener('click', () => {
-  audio.pause()
-})
+function play() {
+  music.loop = true;
+  music.play();
+}
+
+function stop() {
+  music.pause();
+  music.currentTime = 0;
+}
+
+init();
