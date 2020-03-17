@@ -117,5 +117,4 @@ Some exciting topics we’ve explored are chakras, energetic medicine &amp; heal
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

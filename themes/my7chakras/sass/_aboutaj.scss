@@ -47,7 +47,7 @@
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
     
-        @include pcandtb{
+        @include pcandtb {
             background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35@2x.png);
             background-repeat: no-repeat;
             background-position: 100% 96%;
