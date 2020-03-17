@@ -31,7 +31,16 @@
     margin: auto;
     padding-top: 25px;
 
-    @include pcandtb{
+    @include tb{
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    margin: auto;
+    padding-top: 25px;
+
+    }
+
+    @include pc{
 
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +56,12 @@ h1{
     top: 200px;
     margin: auto;
 
-    @include pcandtb{
+    @include tb{
+        padding-left: 35px;
+        padding-top: 0px;
+    }
+
+    @include pc{
         padding-left: 350px;
         padding-top: 80px;
     }
@@ -161,6 +175,10 @@ figcaption{
 } 
 .entry-content{
     @include content-wrapper;
+
+    @include tb {
+        width: 90vw;
+    }
 }
 .row-one{
     display: flex;
