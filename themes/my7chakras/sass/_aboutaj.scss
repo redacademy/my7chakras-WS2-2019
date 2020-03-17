@@ -62,13 +62,12 @@
 
 h1{
    
-    padding-left: 23px;
+    padding-top: 10px;
+    padding-left: 22px;
     top: 170px;
     width: 194px;
     height: 76px;
-    font-family: Mazzard-H;
     font-size: 30px;
-    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.2;
@@ -80,17 +79,16 @@ h1{
     
     @include pcandtb {
 
-        width: 384px;
+        width: 620px;
         height: 55px;
-        font-family: MazzardH-Bold-H;
         font-size: 55px;
-        font-weight: bold;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.18;
         letter-spacing: 0.22px;
         text-align: left;
         color: #3f3f3f;
+        padding-left:180px ;
 
        
     }
@@ -100,12 +98,12 @@ h1{
 
 .gradient-box{
     
-        background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/ABOUT@2x.png);
+        background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1185@2x.png);
         height: 307.5px;
         background-size: contain;
         background-repeat: no-repeat;
         width: 172%;
-        background-position: -84px;
+        background-position: -107px;
 
 
         @include pcandtb{
@@ -140,18 +138,24 @@ h1{
 
 
 h6{
-   
-    font-family: MazzardH-Bold-H;
     font-size: 32px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     text-align: center;
     color: #ffffff;
+
+    @include sp{
+
+    font-size: 20px;
+    padding-top: 64px;
+    padding-right: 264px;
+    }
 }
 
 h4{
-    bottom: 400px;
+    bottom: 470px;
+    padding-left: 22px;
     position: absolute;
     width: 185px;
     height: 125px;
@@ -171,7 +175,9 @@ h4{
 }
 
 p{
-    
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 35px;
     font-family: Meticula;
     font-size: 15px;
     font-weight: normal;
