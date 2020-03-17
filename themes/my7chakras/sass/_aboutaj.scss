@@ -99,12 +99,13 @@ h1{
 }
 
 .gradient-box{
-
+    
         background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/ABOUT@2x.png);
+        height: 307.5px;
+        background-size: contain;
         background-repeat: no-repeat;
-        background-size: 129%;
-        width: 170%;
-        background-position: -43px 1px;
+        width: 172%;
+        background-position: -84px;
 
 
         @include pcandtb{
