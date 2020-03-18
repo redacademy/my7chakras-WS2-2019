@@ -37,19 +37,7 @@ get_header(); ?>
 					</div>
 					<div class="episode__btn">
 						<div class="episode__btnPodcast">
-							<audio id="music">
-								<source src="<?php echo esc_html($post->audio); ?>">
-							</audio>
 							<h5>Stream Podcast</h5>
-							<div class="episode__play">
-								<button data-skip="-30" class="episode__playSkip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/replay-30.png" alt=""></button>
-								<button id="btn_play" onclick="play()" class="episode__playToggle" title="Toggle Play"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/play-circle.png" alt=""></button>
-								<button id="btn_pause" onclick="pause()" class="episode__playToggle" title="Toggle Play"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/play-circle.png" alt=""></button>
-								<button data-skip="30" class="episode__playSkip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/forward-30.png" alt=""></button>
-								<div class="progress">
-									<div class="progress__filled"></div>
-								</div>
-							</div>
 							<div class="episode__play">
 								<div class="player">
 									<audio class="player__video viewer">
@@ -58,7 +46,7 @@ get_header(); ?>
 
 									<div class="player__controls">
 										<button data-skip="-30" class="player__button episode__playSkip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/replay-30.png" alt=""></button>
-										<button class="player__button toggle" title="Toggle Play">►</button>
+										<button class="player__button toggle" title="Toggle Play"> ►</button>
 										<button data-skip="30" class="player__button episode__playSkip"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/forward-30.png" alt=""></button>
 										<div class="progress">
 											<div class="progress__filled"></div>
@@ -69,24 +57,12 @@ get_header(); ?>
 
 							<!-- play function -->
 							<script>
-								// var myMusic = document.getElementById("music");
-
-								// function play() {
-								// 	myMusic.play();
-								// }
-
-								// function pause() {
-								// 	myMusic.pause();
-								// }
-								/* Get Our Elements */
 								const player = document.querySelector('.player');
 								const audio = player.querySelector('.viewer');
 								const progress = player.querySelector('.progress');
 								const progressBar = player.querySelector('.progress__filled');
 								const toggle = player.querySelector('.toggle');
 								const skipButtons = player.querySelectorAll('[data-skip]');
-								const ranges = player.querySelectorAll('.player__slider');
-								const full = player.querySelector('.player__full');
 
 								function togglePlay() {
 									const method = audio.paused ? 'play' : 'pause';
@@ -94,7 +70,7 @@ get_header(); ?>
 								}
 
 								function updateButton() {
-									const icon = this.paused ? '►' : '❚ ❚';
+									const icon = this.paused ? '  ►' : '❚ ❚';
 									console.log(icon);
 									toggle.textContent = icon;
 								}
@@ -102,10 +78,6 @@ get_header(); ?>
 								function skip() {
 									console.log(this.dataset.skip);
 									audio.currentTime += parseFloat(this.dataset.skip);
-								}
-
-								function handleRangeUpdate() {
-									audio[this.name] = this.value;
 								}
 
 								function handleProgress() {
@@ -117,10 +89,6 @@ get_header(); ?>
 									const scrubTime = (e.offsetX / progress.offsetWidth) * audio.duration;
 									audio.currentTime = scrubTime;
 									console.log(e);
-								}
-
-								function fullS() {
-									full.requestFullscreen();
 								}
 
 								audio.addEventListener('click', togglePlay);
@@ -137,7 +105,6 @@ get_header(); ?>
 								progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
 								progress.addEventListener('mousedown', () => mousedown = true);
 								progress.addEventListener('mouseup', () => mousedown = false);
-								full.addEventListener('click', fullS);
 							</script>
 
 						</div>
