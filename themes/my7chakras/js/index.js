@@ -1,3 +1,4 @@
+$(window).ready(function() {
 $(function () {
     // Add position absolute to elements with sub-menu
     $('.sub-menu').hide()
@@ -12,7 +13,7 @@ $(function () {
     });
     // Sub menu animation
     if ($(window).width() < 980) {
-        event.preventDefault()
+     
         $('.sub-menu-ul').on('click', function () {
             $(this).find('.sub-menu').slideToggle();
             $(this).toggleClass('close-icon');
@@ -27,34 +28,34 @@ $(function () {
     }
     // Burge menu animations
     $('.menu-toggle').on('click', function (event) {
-        event.preventDefault()
+     
         let menuBar = $('.main-manu-content');
         menuBar.slideToggle()
     });
     $('.burger-icon').on('click', function (event) {
-        event.preventDefault()
+     
         let closeIcon = $('.close-icon');
         closeIcon.toggleClass('hide');
         let burgeIcon = $('.burger-icon');
         burgeIcon.toggleClass('hide');
     });
     $('.close-icon').on('click', function (event) {
-        event.preventDefault()
+     
         let closeIcon = $('.close-icon');
         closeIcon.toggleClass('hide');
         let burgeIcon = $('.burger-icon');
         burgeIcon.toggleClass('hide');
     });
     $('.search-toggle').on('click', function (event) {
-        event.preventDefault()
+     
         let searchBar = $('.search-bar');
         searchBar.slideToggle()
     });
     // Show the correct form depending on the link
     $('#aj-button').addClass('change-color');
     $('.aj-text').hide();
-    $('#general-button').on('click', function () {
-        event.preventDefault()
+    $('#general-button').on('click', function (event) {
+     
         $('.contact-aj').hide();
         $('.contact-gi').show();
         $('#aj-button').addClass('change-color');
@@ -66,8 +67,8 @@ $(function () {
             $('.aj-text').hide();
         }
     });
-    $('#aj-button').on('click', function () {
-        event.preventDefault()
+    $('#aj-button').on('click', function (event) {
+     
         $('.contact-gi').hide();
         $('.contact-aj').show();
         $('#general-button').addClass('change-color');
@@ -79,4 +80,6 @@ $(function () {
             $('.aj-text').hide();
         }
     });
+});
+
 });

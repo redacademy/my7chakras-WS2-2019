@@ -1,4 +1,5 @@
-html {
+
+*{
     scroll-behavior: smooth;
   }
   
@@ -71,7 +72,11 @@ html {
             
         }
         .image-card{
-            position: relative;
+            position: relative;  
+            width: 100%;
+            height: 321px;
+  
+
             div{
                 position: absolute;
                 bottom: 20px;
@@ -82,6 +87,7 @@ html {
                 color: $purple;
                 border-radius: 3px;
              
+                
 
             }
         }
@@ -260,8 +266,8 @@ html {
             font-size: 1.375rem;
             line-height: 1.06;
             letter-spacing: -0.61px;
-            span{
-                font-size: 2rem;
+            .numbers{
+                font-size: 2.6rem;
                 @include pcandtb{
                     font-size: unset;
                 }

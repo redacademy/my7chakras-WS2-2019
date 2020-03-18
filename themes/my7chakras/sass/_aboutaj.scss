@@ -1,5 +1,6 @@
 .aboutaj{
 
+
     .aj-hidesktop {
         display: none;
 
@@ -16,6 +17,20 @@
 
         }
 
+    }
+
+    .entry-content{
+        // @include content-wrapper;
+    
+        @include pc{
+            width: 100%;
+        }
+        @include tb {
+            width: 100vw;
+        }
+        // @include sp {
+        //     width: 374px;
+        // }
     }
 
 
@@ -67,8 +82,8 @@
 
 h1{
    
-    padding-top: 10px;
-    padding-left: 22px;
+    padding-top: 14px;
+    padding-left: 20px;
     top: 170px;
     width: 194px;
     height: 76px;
@@ -115,13 +130,13 @@ h1{
 
 .gradient-box{
     
-        background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1185@2x.png);
+        background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1185@2x-1.png);
         height: 307.5px;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
-        width: 172%;
+        // width: 172%;
         overflow: hidden;
-        background-position: -107px;
+        background-position: -160px;
 
 
         @include pc{
@@ -136,13 +151,13 @@ h1{
                 }
 
                 @include tb{
-                height: 622px;
-                background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/ABOUT@2x.png); 
+                height: 410px;
+                background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1185@2x-1.png); 
                 background-repeat: no-repeat;
-                background-size: 136%;
-                width: 117%;
+                background-size: 100%;
+                width: 100%;
                 overflow: hidden;
-                background-position: -112px 12px;
+                background-position: 0 0;
                 }
 }
 
@@ -173,11 +188,14 @@ h6{
     text-align: center;
     color: #ffffff;
 
+    @include tb {
+        margin: 0;
+    padding-top: 35px;
+    }
+
     @include sp{
 
     font-size: 20px;
-    padding-top: 64px;
-    padding-right: 264px;
     }
 }
 
