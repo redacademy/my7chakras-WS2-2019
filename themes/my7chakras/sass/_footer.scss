@@ -80,6 +80,8 @@ font-family: $font-main !important;
 
    .subscription{
     display: flex;
+    justify-content: center;
+
     @include pcandtb{
         
     }

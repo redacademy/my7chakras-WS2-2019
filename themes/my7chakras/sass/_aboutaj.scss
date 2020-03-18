@@ -27,13 +27,18 @@
         margin-left: 201px;
         margin-top: -226px;
 
-    @include pcandtb{
+    @include pc{
     width: 290px;
     height: 339px;
     position: absolute;
     margin-top: -363px;
     margin-left: 1128px;
-    
+    }
+    @include tb{
+    width: 290px;
+    height: 339px;
+    margin-top: -363px;
+    margin-left: 444px;
     }
 }
 
@@ -47,7 +52,7 @@
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
     
-        @include pcandtb{
+        @include pcandtb {
             background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35@2x.png);
             background-repeat: no-repeat;
             background-position: 100% 96%;
@@ -77,7 +82,7 @@ h1{
 
     
     
-    @include pcandtb {
+    @include pc {
 
         width: 620px;
         height: 55px;
@@ -92,6 +97,18 @@ h1{
 
        
     }
+
+    @include tb {
+        padding-left: 20px;
+        width: 620px;
+        font-size: 50px;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: 0.22px;
+        color: #3f3f3f;
+
+
+    }
  
     
 }
@@ -103,10 +120,11 @@ h1{
         background-size: contain;
         background-repeat: no-repeat;
         width: 172%;
+        overflow: hidden;
         background-position: -107px;
 
 
-        @include pcandtb{
+        @include pc{
 
             height: 622px;
             background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/ABOUT@2x.png);
@@ -115,6 +133,16 @@ h1{
             width: 100%;
             overflow: hidden;
             background-position: 0px 12px;
+                }
+
+                @include tb{
+                height: 622px;
+                background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/ABOUT@2x.png); 
+                background-repeat: no-repeat;
+                background-size: 136%;
+                width: 117%;
+                overflow: hidden;
+                background-position: -112px 12px;
                 }
 }
 

@@ -6,7 +6,7 @@ html {
     @include box-column;
 
     .feature{
-    @include reset
+    @include reset;
 
         margin: 0% 5%;
     }
@@ -42,6 +42,7 @@ html {
         width: 90%;
         margin: 5% auto;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        border-radius: 10px;
         p{
             padding: 2% 5%;
             line-height: 1.18;
@@ -59,6 +60,15 @@ html {
             padding: 6%;
             text-align: end;
 
+        }
+
+        .more:hover{
+
+            a{
+                color: $purple;
+            }
+          
+            
         }
         .image-card{
             position: relative;
@@ -188,7 +198,7 @@ html {
         }
 
         div{
-            width: 55%;
+            width: 60%;
             padding: 5%;
             padding-right: 0%;
             @include pcandtb{
@@ -199,7 +209,7 @@ html {
 
         figure{
             @include reset;
-            width: 45%;
+            width: 40%;
             position: relative;
 
             img{
