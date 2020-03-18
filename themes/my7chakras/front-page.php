@@ -34,34 +34,7 @@ get_header(); ?>
 						<a href="<?php echo get_permalink(); ?>">
 								<div class="image-card">
 									
-									<img class = "wp-post-image" src = "<?php 
-									
-									// echo get_the_post_thumbnail_url();
-
-									if (has_post_thumbnail()) {
-										// display the featured image
-										the_post_thumbnail();
-									}else {
-										// set the featured image
-										$attachments = get_posts(array(
-											'post_type' => 'attachment', 
-											'post_mime_type'=>'image', 
-											'posts_per_page' => 0, 
-											'post_parent' => $post->ID, 
-											'order'=>'ASC'
-										));
-										if ($attachments) {
-											foreach ($attachments as $attachment) {
-												set_post_thumbnail($post->ID, $attachment->ID);
-												break;
-											}
-											// display the featured image
-											the_post_thumbnail();
-										}
-									}									
-									
-									?>
-									">
+									<img class = "wp-post-image" src = "<?php echo get_the_post_thumbnail_url();?>">
 									<div>
 										
 										<?php echo trim(explode('|',get_the_title(),2)[1]);?>
@@ -100,6 +73,5 @@ get_header(); ?>
 
 
 <?php get_footer(); ?>
-
 
 
