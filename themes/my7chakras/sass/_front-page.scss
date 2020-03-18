@@ -6,7 +6,7 @@ html {
     @include box-column;
 
     .feature{
-    @include reset
+    @include reset;
 
         margin: 0% 5%;
     }
@@ -15,11 +15,34 @@ html {
         order: 1;
     @include box-column;
 
+    .post-tags{
+        color: #ac5f80;
+
+        a{
+            font-family:$font-main;
+            font-size: 15px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: italic;
+            line-height: 1.33;
+            letter-spacing: normal;
+            text-align: left;
+            color: #ac5f80;
+        }
+
+        a:hover{
+            color: #814760;
+
+        }
+     
+    }
+
 
     .card-container{
         width: 90%;
         margin: 5% auto;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        border-radius: 10px;
         p{
             padding: 2% 5%;
             line-height: 1.18;
@@ -34,9 +57,18 @@ html {
         }
 
         .more{
-            padding: 2%;
+            padding: 6%;
             text-align: end;
 
+        }
+
+        .more:hover{
+
+            a{
+                color: $purple;
+            }
+          
+            
         }
         .image-card{
             position: relative;
@@ -102,7 +134,7 @@ html {
         text-align: center;
         background-position-y: 7px;
         background-position-x: -150px;
-        height: 57vh;
+        height: 60vh;
 
         
         a{
@@ -128,10 +160,10 @@ html {
             }
         }
         p:nth-last-of-type(2){
-            margin-bottom: 25%;
+            margin-bottom: 20%;
             @include pcandtb{
                 @include reset;
-                width: 70%;
+                width: 90%;
                 margin: 2% auto;
             }
     
@@ -166,7 +198,7 @@ html {
         }
 
         div{
-            width: 55%;
+            width: 60%;
             padding: 5%;
             padding-right: 0%;
             @include pcandtb{
@@ -177,7 +209,7 @@ html {
 
         figure{
             @include reset;
-            width: 45%;
+            width: 40%;
             position: relative;
 
             img{

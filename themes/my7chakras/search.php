@@ -8,12 +8,20 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+
+		<main id="main" class="site-main search-page" role="main">
+
+		<div class="total-results">
+		<?php
+		$allsearch = new WP_Query("s=$s&showposts=0"); 
+		echo $allsearch ->found_posts.' Result(s) for:'. get_search_query();
+			?>
+		</div>
+		
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -34,5 +42,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+	<?php wp_footer(); ?>
+
