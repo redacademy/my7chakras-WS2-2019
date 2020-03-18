@@ -7,18 +7,29 @@
 
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
+			<?php 
+			
+			$categories = get_categories( array(
+				'orderby' => 'name',
+				'parent'  => 0
+			) );
+			 
+			foreach ( $categories as $category ) {
+				printf( '<a class= "category-search" href="%1$s">%2$s</a><br />',
+					esc_url( get_category_link( $category->term_id ) ),
+					esc_html( $category->name )
+				);
+			}
+			?> 
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+		<?php the_title( sprintf( '<p class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+			<hr>
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
 </article><!-- #post-## -->
