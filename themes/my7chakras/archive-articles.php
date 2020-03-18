@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area episodes">
+<div id="primary" class="content-area episodes blog">
     <main id="main" class="site-main" role="main">
         <div class="episodes__wrapper">
             <div class="episodes__heading">

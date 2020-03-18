@@ -190,6 +190,7 @@
 .search-form fieldset label {
     border: none;
 }
+.search-form fieldset input {border: none;}
 
     }
 
@@ -293,7 +294,7 @@
                 border-radius: 10px;
                 border: none;
                 position:relative;
-                height:132px;
+                height:160px;
                 overflow:hidden;
                 border-radius: 10px;
                 padding: 5px;
@@ -325,6 +326,7 @@
             }
         }
         &__related{
+            margin-top: 80px;
             &Item{
             border-radius: 10px;
             box-shadow: $shadow;
@@ -431,27 +433,47 @@
           .player__button.toggle{
               background-color: $purple;
               color: #ffffff;
+              width: 34px;
+              height: 30px;
+              border-radius: 50%;
+              padding-top: 3px;
+              padding-left: 1px;
+              letter-spacing: 0;
           }
 
           .player__controls {
             display: flex;
+            align-items:center;
           }
           
           .progress {
+            display: flex;
             flex: 10;
             position: relative;
-            display: flex;
-            flex-basis: 100%;
-            height: 5px;
+            height: 8px;
             transition: height 0.3s;
-            background: rgba(0,0,0,0.5);
+            background: #DEDEDE;
             cursor: ew-resize;
+            border-radius: 10px;
+            margin:0 10px;
           }
           
           .progress__filled {
             width: 50%;
-            background: $purple;
+            background: #A6A5C7;
             flex: 0;
-            flex-basis: 50%;
+            flex-basis: 1%;            
+            border-radius: 10px;
+            position: relative;
+            &:after{
+                position: absolute;
+                right: 0;
+                content: '';
+                background-image: url('../../assets/images/episodes/purple-cirlcle.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 9px;
+                height: 9px;
+            }
           }
     }

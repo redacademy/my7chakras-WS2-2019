@@ -169,6 +169,7 @@
         display: flex;
         justify-content: space-between;
         margin-top: 70px;
+        padding-right: 20px;
     }
     &__post{
         border-radius: 15px;
@@ -269,6 +270,7 @@
                 background-color: #ffffff;
                 box-shadow: $shadow;
                 margin: 0 10px;
+                height: 60px;
             }
             img{
                 width: 35px;
@@ -283,19 +285,21 @@
     }
 }
 &__play{
-    padding: 5px 15px;
+    padding: 13px 15px;
     background-color: #ffffff;
     box-shadow: $shadow;
     margin: 0 10px 20px;
     align-items: center;
     border-radius: 10px;
+    @include pc{
+        width: 750px;
+        height: 60px;
+    }
     button{
         background: #ffffff;
         border: none;
         padding: 0;
-    }
-    &Toggle{
-        
+        margin: 0 8px;
     }
     &Skip{
     img{
