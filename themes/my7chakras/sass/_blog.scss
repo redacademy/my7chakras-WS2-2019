@@ -219,13 +219,14 @@
             }
             &__thumbnail{
                 position:relative;
-                width:50vw;
-                height: 40vh;
+                width:600px;
+                height: 350px;
                 overflow:hidden;
                 margin: auto;
                 margin-bottom: 30px;
                 @include spandtb{
                     height:29vh;
+                    width: 100%;
                 }
                 img{
                     width: 100%;
@@ -471,6 +472,12 @@
                     background-repeat: no-repeat;
                     vertical-align: middle;
                 }
+            }
+        }
+
+        .player__button{
+            &:focus{
+                outline: none;
             }
         }
 
