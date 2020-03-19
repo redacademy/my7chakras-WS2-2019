@@ -11,5 +11,10 @@
             font-size: 21px;
             line-height: 25px;
         }
+        p{
+            @include sp{
+            width: 800px;
+        }
+        }
     }
 }

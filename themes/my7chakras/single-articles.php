@@ -95,6 +95,7 @@ get_header(); ?>
                                 array_push($category_ID, $category->cat_ID);
                             endforeach;
                             $args = array(
+                                'post_type' => 'articles',
                                 'post__not_in' => array($post->ID),
                                 'posts_per_page' => 3,
                                 'category__in' => $category_ID,
