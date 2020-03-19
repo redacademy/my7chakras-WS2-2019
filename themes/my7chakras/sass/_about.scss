@@ -156,6 +156,19 @@ figure{
     text-align: center;
 }
 
+.sticky-button{
+    @include reset;
+    position: fixed;
+  background: none;
+  right: 5%;
+  bottom: 10%;
+  border: none;
+  z-index: 999;
+ @include pcandtb{
+     display: none;
+ }
+}
+
 figcaption{
     font-weight: 700;
     text-align: center;
