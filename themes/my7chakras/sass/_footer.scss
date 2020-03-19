@@ -90,6 +90,8 @@ font-family: $font-main !important;
    .wpcf7-form{
     justify-content: center;
    }
+
+
     
 }
 
@@ -159,6 +161,14 @@ font-family: $font-main !important;
 .widget-title{
     display: none;
     
+}
+
+.wpcf7-response-output{
+    background-color: $purple;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    color: $white;
+    border: unset !important;
+    border-radius: 3px;
 }
 
 

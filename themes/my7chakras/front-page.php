@@ -5,7 +5,11 @@
  * @package RED_Starter_Theme
  */
 
+
+
+
 get_header(); ?>
+
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -34,7 +38,21 @@ get_header(); ?>
 						<a href="<?php echo get_permalink(); ?>">
 								<div class="image-card">
 									
-									<img class = "wp-post-image" src = "<?php echo get_the_post_thumbnail_url();?>">
+
+									<img class = "wp-post-image" src = "<?php 
+									
+									if ( get_the_post_thumbnail($post_id) != '' ) {
+
+										echo get_the_post_thumbnail_url();
+									  
+									  } else {
+									  
+									   echo catch_that_image();
+									  
+									  }
+									
+									?>">
+
 									<div>
 										
 										<?php echo trim(explode('|',get_the_title(),2)[1]);?>
