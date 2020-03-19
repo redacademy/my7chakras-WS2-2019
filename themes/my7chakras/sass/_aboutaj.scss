@@ -181,6 +181,19 @@ h1{
 
 }
 
+.sticky-button{
+    @include reset;
+    position: fixed;
+  background: none;
+  right: 5%;
+  bottom: 10%;
+  border: none;
+  z-index: 999;
+ @include pcandtb{
+     display: none;
+ }
+}
+
 
 h6{
     font-size: 32px;

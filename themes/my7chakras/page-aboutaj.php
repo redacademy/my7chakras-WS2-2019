@@ -17,6 +17,10 @@ get_header(); ?>
 	<div class="bg-img"><h1><span class="head-about">About</span> the Host </h1></div>
 	</header><!-- .entry-header -->
 
+	<button class="sticky-button">
+						<img  src= "<?php echo get_template_directory_uri();?>/assets/logo/slide-button.svg" alt="logo">
+					</button>
+
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

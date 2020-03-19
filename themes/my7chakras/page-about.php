@@ -100,6 +100,10 @@ Some exciting topics we’ve explored are chakras, energetic medicine &amp; heal
 </div>
 </div>
 
+					<button class="sticky-button">
+						<img  src= "<?php echo get_template_directory_uri();?>/assets/logo/slide-button.svg" alt="logo">
+					</button>
+
 <!-- wp:paragraph -->
 <p></p>
 <!-- /wp:paragraph -->
