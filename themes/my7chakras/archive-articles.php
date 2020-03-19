@@ -8,11 +8,15 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area episodes blog">
+<div id="primary" class="content-area episodes blog resources">
     <main id="main" class="site-main" role="main">
         <div class="episodes__wrapper">
-            <div class="episodes__heading">
+            <div class="episodes__heading resources__heading">
                 <h1>Enlighten Yourself With Inner Knowledge </h1>
+                <p>Lorem ipsum dolor sit amet, consetetur
+                    sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut . Lorem ipsum dolor sit amet, consetetur
+                </p>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes_heading.png" alt="heading flower">
             </div>
 
