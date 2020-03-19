@@ -52,6 +52,8 @@
 
 
 h1{
+    font-family: $font-heading;
+    font-weight: 700;
     position: absolute;
     top: 135px;
     left:20px;
@@ -73,11 +75,11 @@ h1{
 h2{
 
     // width: 300px;
-    font-family: Meticula;
+    font-family: $font-main;
     font-size: 17px;
     padding-top: 50px;
     font-family: $font-main;
-    font-weight: normal;
+    font-weight: 600;
     font-stretch: normal;
     font-style: normal;
     padding-bottom: 25px;
@@ -102,6 +104,7 @@ h3{
     text-align: center!important;
     height: 24px;
     font-size: 22px;
+    font-weight: 700;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.14;
@@ -154,6 +157,7 @@ figure{
 }
 
 figcaption{
+    font-weight: 700;
     text-align: center;
     height: 17px;
     font-size: 17px;
