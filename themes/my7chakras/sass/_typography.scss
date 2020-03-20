@@ -25,10 +25,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: $heading-size--pc;
 	font-family: $font-heading;
-	font-weight: 500;
+	font-weight: 600;
 	margin: 0.67em 0;
 	line-height: 65px;
-	letter-spacing: -1px;
+	letter-spacing: .22px;
 	@include sp{
 		font-size: $heading-size--sp;
 		line-height: 33px;
@@ -39,8 +39,8 @@ h1 {
 h2{
 	font-size: $title-size--pc;
 	font-family: $font-heading;
-	font-weight: normal;
-	letter-spacing: -1px;
+	font-weight: 600;
+	letter-spacing: .22px;
 	@include sp{
 		letter-spacing: 0;
 		font-size: $title-size--sp;
