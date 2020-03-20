@@ -19,7 +19,11 @@
         width:270px;
         height:236px;
         overflow:hidden;
-        @include spandtb{
+        @include tb{
+            width: 100%;
+            height: 315px;
+        }
+        @include sp{
         width: 100%;
         height: 215px;
     }
@@ -257,7 +261,7 @@
                     padding: 70px 10px 120px;
                 }
                 @include tb{
-                    padding: 120px 10px 210px;
+                    padding: 120px 10px 240px;
                 }
                 &Wrapper{
                     @include content-wrapper;
@@ -458,7 +462,7 @@
             &Content{
                     width: 100%;
                     padding: 10px 10px 20px;
-                    height: 30vh;
+                    height: 260px;
             }
             &Excerpt{
                 margin-bottom: 40px;

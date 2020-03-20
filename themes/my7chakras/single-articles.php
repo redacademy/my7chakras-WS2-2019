@@ -61,40 +61,27 @@ get_header(); ?>
                             <?php if ($prev_post) :
                             ?>
                                 <a href="<?php echo get_permalink($prev_post->ID); ?>" class="prev-link">
-                                    <img src="<?php
+                                    <?php if (get_the_post_thumbnail($prev_post->ID)) :
+                                    ?>
+                                        <?php echo get_the_post_thumbnail($prev_post->ID, 'full'); ?>
 
-                                                if (get_the_post_thumbnail($prev_post->ID) != '') {
-
-                                                    echo get_the_post_thumbnail_url();
-                                                } else {
-
-                                                    echo catch_that_image();
-                                                }
-
-                                                ?>">
+                                    <?php endif; ?>
                                     <div>
-                                        <p>Previous Episode</p>
-                                        <p class="page-navTitle"><?php echo get_the_title($next_post->ID); ?></p>
+                                        <p class="page-navTitle">Previous Episode</p>
+                                        <p class="page-navContent"><?php echo get_the_title($next_post->ID); ?></p>
                                     </div>
                                 </a>
                             <?php endif; ?>
                             <?php if ($next_post) :
                             ?>
                                 <a href="<?php echo get_permalink($next_post->ID); ?>" class="next-link">
-                                    <img src="<?php
-
-                                                if (get_the_post_thumbnail($next_post->ID) != '') {
-
-                                                    echo get_the_post_thumbnail_url($next_post->ID);
-                                                } else {
-
-                                                    echo catch_that_image($next_post->ID);
-                                                }
-
-                                                ?>">
+                                    <?php if (get_the_post_thumbnail($next_post->ID)) :
+                                    ?>
+                                        <?php echo get_the_post_thumbnail($next_post->ID, 'full'); ?>
+                                    <?php endif; ?>
                                     <div>
                                         <p class="page-navTitle">Next Episode</p>
-                                        <p><?php echo get_the_title($next_post->ID); ?></p>
+                                        <p class="page-navContent"><?php echo get_the_title($next_post->ID); ?></p>
                                     </div>
                                 </a>
                             <?php endif; ?>
@@ -155,7 +142,6 @@ get_header(); ?>
 
                         </div>
                     </div>
-                    <?php related_posts(); ?>
                 </div>
             <?php endwhile; // End of the loop.
             ?>

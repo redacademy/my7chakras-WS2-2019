@@ -31,9 +31,17 @@ get_header(); ?>
 						<?php the_tags('', ' | '); ?>
 					</p>
 					<div class="post__thumbnail">
-						<?php if (has_post_thumbnail()) : ?>
-							<?php the_post_thumbnail('large'); ?>
-						<?php endif; ?>
+						<img src="<?php
+
+									if (get_the_post_thumbnail($post_id) != '') {
+
+										echo get_the_post_thumbnail_url();
+									} else {
+
+										echo catch_that_image();
+									}
+
+									?>">
 					</div>
 					<div class="episode__btn">
 						<div class="episode__btnPodcast">
@@ -143,9 +151,7 @@ get_header(); ?>
 									<?php if (get_the_post_thumbnail($prev_post->ID)) :
 									?>
 										<?php echo get_the_post_thumbnail($prev_post->ID, 'full'); ?>
-									<?php else :
-									?>
-										<img src="no-image.jpg" alt="">
+
 									<?php endif; ?>
 									<div>
 										<p class="page-navTitle">Previous Episode</p>
@@ -159,9 +165,6 @@ get_header(); ?>
 									<?php if (get_the_post_thumbnail($next_post->ID)) :
 									?>
 										<?php echo get_the_post_thumbnail($next_post->ID, 'full'); ?>
-									<?php else :
-									?>
-										<img src="no-image.jpg" alt="">
 									<?php endif; ?>
 									<div>
 										<p class="page-navTitle">Next Episode</p>
@@ -220,12 +223,10 @@ get_header(); ?>
 
 								<p>There is no related post</p>
 
-							<?php endif;
-							wp_reset_postdata(); ?>
+							<?php endif; ?>
 
 						</div>
 					</div>
-					<?php related_posts(); ?>
 				</div>
 			<?php endwhile; // End of the loop.
 			?>
