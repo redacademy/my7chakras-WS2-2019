@@ -56,9 +56,17 @@ get_header(); ?>
 
 						<article id="post-<?php the_ID(); ?>" class="blog__post">
 							<div class="blog__postImg">
-								<?php if (has_post_thumbnail()) : ?>
-									<?php the_post_thumbnail('large'); ?>
-								<?php endif; ?>
+								<img src="<?php
+
+											if (get_the_post_thumbnail($post_id) != '') {
+
+												echo get_the_post_thumbnail_url();
+											} else {
+
+												echo catch_that_image();
+											}
+
+											?>">
 								<p class="blog__postNum">Episode <?php echo getPostThNumber() ?></p>
 							</div>
 							<div class="blog__postContent">
