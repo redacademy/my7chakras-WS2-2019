@@ -44,11 +44,16 @@ template {
 a {
 	background-color: transparent;
 	text-decoration: none;
+	transition: 0.3s;
 }
 
 a:active,
 a:hover {
 	outline: 0;
+}
+
+a:hover {
+	opacity: 0.8;
 }
 
 abbr[title] {
@@ -127,6 +132,9 @@ textarea {
 	color: inherit;
 	font: inherit;
 	margin: 0;
+	&:focus{
+		outline: none;
+	}
 }
 
 button {
