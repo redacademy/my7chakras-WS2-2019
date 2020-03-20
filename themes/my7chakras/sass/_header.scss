@@ -35,17 +35,19 @@
             list-style: none;
             margin: 0%;
             padding: 0%;
+            align-items: center;
             .menu-item{
                 a{
                 margin: 0 3% ;
-                border-radius: 5px;
-                height: 73px;
+              
+                // height: 73px;
                 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
                 align-items: center;
                 display: flex;
                 align-items: center;
                 letter-spacing: 0.15px;
                 padding: 3%;
+                height: fit-content;
                 @include pcandtb{
                     @include reset; 
                     box-shadow: unset;
@@ -145,9 +147,9 @@ fieldset{
                 display: flex;
                 flex-direction: column!important;
                 position: absolute;
-                top: 70%;
+                top: 73%;
                 width: fit-content;
-                border-radius: px;
+               
                 box-shadow:0px 0px 3px rgba(0, 0, 0, 0.16)!important;
             }
 
@@ -156,6 +158,10 @@ fieldset{
 .sub-menu-container{
     @include pcandtb{
         position: relative;
+        height: 73px;
+        display: flex;
+        align-items: center;
+
     }
 }
 
@@ -197,12 +203,17 @@ fieldset{
         @include pcandtb{
             font-size: 1.2rem;
             transition: 1s all;
-            content: ">";
+            content: "<";
             transform: rotate(90deg);
         } 
     }
 }
 
+.menu-item-object-page:hover{
+    
+        border-bottom: solid;
+    
+}
 
 
 .search-bar{
@@ -234,4 +245,9 @@ fieldset{
 
 #masthead{
     outline: none;
+}
+
+
+.border{
+    border-bottom: solid;
 }

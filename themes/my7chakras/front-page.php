@@ -55,7 +55,7 @@ get_header(); ?>
 
 									<div>
 										
-										<?php echo trim(explode('|',get_the_title(),2)[1]);?>
+									Episode <?php echo getPostThNumber();?>
 									
 									</div>
 
