@@ -24,6 +24,7 @@ $(function () {
             $(this).addClass('sub-menu-container');
             $(this).toggleClass('close-icon');
             $(this).find('.sub-menu').slideToggle();
+            $(this).find('.icon-menu').toggleClass('border');
         });
     }
     // Burge menu animations
