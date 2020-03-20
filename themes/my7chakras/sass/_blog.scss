@@ -258,6 +258,15 @@
                 }
                 &Wrapper{
                     @include content-wrapper;
+                    img{
+                        @include spandtb{
+                            margin: 0 0 20px;
+                            float: left;
+                        }
+                    }
+                    a{
+                        color: #ffffff;
+                    }
                 }
             }
             &__white{
