@@ -1,20 +1,23 @@
-@include sp{
 .resources{
     &__heading{
+        @include sp{
             background-image: url('../../assets/images/blog/header_background.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             height: 240px;
             padding-top: 50px;
+        }
         }       
         h1{
+            @include sp{
             font-size: 21px;
             line-height: 25px;
+            }
         }
         p{
             @include sp{
-            width: 800px;
-        }
+            width: 100%;
+            }
+            width: 750px;
         }
     }
-}
