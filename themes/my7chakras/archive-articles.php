@@ -40,9 +40,17 @@ get_header(); ?>
 
                         <article id="post-<?php the_ID(); ?>" class="blog__post">
                             <div class="blog__postImg">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('large'); ?>
-                                <?php endif; ?>
+                                <img src="<?php
+
+                                            if (get_the_post_thumbnail($post_id) != '') {
+
+                                                echo get_the_post_thumbnail_url();
+                                            } else {
+
+                                                echo catch_that_image();
+                                            }
+
+                                            ?>">
                             </div>
                             <div class="blog__postContent">
                                 <div class="blog__postDay">
