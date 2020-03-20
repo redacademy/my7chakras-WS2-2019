@@ -256,6 +256,9 @@
                     position: relative;
                     padding: 70px 10px 120px;
                 }
+                @include tb{
+                    padding: 120px 10px 210px;
+                }
                 &Wrapper{
                     @include content-wrapper;
                     img{
@@ -265,7 +268,9 @@
                         }
                     }
                     a{
+                        @include spandtb{
                         color: #ffffff;
+                    }
                     }
                 }
             }

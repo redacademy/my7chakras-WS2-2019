@@ -31,9 +31,17 @@ get_header(); ?>
                         <?php the_tags('', ' | '); ?>
                     </p>
                     <div class="post__thumbnail">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <?php the_post_thumbnail('large'); ?>
-                        <?php endif; ?>
+                        <img src="<?php
+
+                                    if (get_the_post_thumbnail($post_id) != '') {
+
+                                        echo get_the_post_thumbnail_url();
+                                    } else {
+
+                                        echo catch_that_image();
+                                    }
+
+                                    ?>">
                     </div>
                 </div>
                 <div class="post__text">
@@ -53,13 +61,17 @@ get_header(); ?>
                             <?php if ($prev_post) :
                             ?>
                                 <a href="<?php echo get_permalink($prev_post->ID); ?>" class="prev-link">
-                                    <?php if (get_the_post_thumbnail($prev_post->ID)) :
-                                    ?>
-                                        <?php echo get_the_post_thumbnail($prev_post->ID, 'full'); ?>
-                                    <?php else :
-                                    ?>
-                                        <img src="no-image.jpg" alt="">
-                                    <?php endif; ?>
+                                    <img src="<?php
+
+                                                if (get_the_post_thumbnail($prev_post->ID) != '') {
+
+                                                    echo get_the_post_thumbnail_url();
+                                                } else {
+
+                                                    echo catch_that_image();
+                                                }
+
+                                                ?>">
                                     <div>
                                         <p>Previous Episode</p>
                                         <p class="page-navTitle"><?php echo get_the_title($next_post->ID); ?></p>
@@ -69,13 +81,17 @@ get_header(); ?>
                             <?php if ($next_post) :
                             ?>
                                 <a href="<?php echo get_permalink($next_post->ID); ?>" class="next-link">
-                                    <?php if (get_the_post_thumbnail($next_post->ID)) :
-                                    ?>
-                                        <?php echo get_the_post_thumbnail($next_post->ID, 'full'); ?>
-                                    <?php else :
-                                    ?>
-                                        <img src="no-image.jpg" alt="">
-                                    <?php endif; ?>
+                                    <img src="<?php
+
+                                                if (get_the_post_thumbnail($next_post->ID) != '') {
+
+                                                    echo get_the_post_thumbnail_url($next_post->ID);
+                                                } else {
+
+                                                    echo catch_that_image($next_post->ID);
+                                                }
+
+                                                ?>">
                                     <div>
                                         <p class="page-navTitle">Next Episode</p>
                                         <p><?php echo get_the_title($next_post->ID); ?></p>
