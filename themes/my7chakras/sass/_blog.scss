@@ -198,13 +198,6 @@
 
     }
 
-
-
-
-
-
-
-
     .post{
             &__wrapper{
                 @include content-wrapper;
@@ -500,14 +493,14 @@
         }
 
           .player__button.toggle{
-              background-color: $purple;
-              color: #ffffff;
-              width: 34px;
-              height: 30px;
-              border-radius: 50%;
-              padding-top: 3px;
-              padding-left: 1px;
-              letter-spacing: 0;
+            background-color: #323184;
+            color: #fff;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            padding-top: 3px;
+            padding-left: 2px;
+            letter-spacing: 0;
           }
 
           .player__controls {
