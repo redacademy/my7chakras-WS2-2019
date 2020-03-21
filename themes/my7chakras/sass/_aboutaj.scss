@@ -21,7 +21,7 @@
 
     .entry-content{
         // @include content-wrapper;
-    
+    position: relative;
         @include pc{
             width: 100%;
         }
@@ -35,12 +35,12 @@
 
 
     .aj{
-        width: 167px;
+        width: 152px;
         height: 202px;
         object-fit: contain;
         position: absolute;
-        margin-left: 201px;
-        margin-top: -226px;
+        right: 0;
+        top: -217px;
 
     @include pc{
     width: 290px;
@@ -58,17 +58,18 @@
 }
 
     .bg-img {
-        background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35.png);
+        background-image: url(http://my7chakras.van.cp.academy.red/wp-content/uploads/2020/03/Mask-Group-35.png);
         background-repeat: no-repeat;
         background-position:right ;
-        width: 375px;
+        width: 100%;
         height: 285px;
         border-radius: 5px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
+        position: relative;
     
         @include pcandtb {
-            background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Mask-Group-35@2x.png);
+            background-image: url(http://my7chakras.van.cp.academy.red/wp-content/uploads/2020/03/Mask-Group-35@2x.png);
             background-repeat: no-repeat;
             background-position: 100% 96%;
             padding-top: 90px;
@@ -137,7 +138,7 @@ h1{
 
 .gradient-box{
     
-        background-image: url(http://localhost/my7chakras/wp-content/uploads/2020/03/Group-1185@2x-1.png);
+        background-image: url(http://my7chakras.van.cp.academy.red/wp-content/uploads/2020/03/Group-1185@2x-1-1.png);
         height: 307.5px;
         background-size: cover;
         background-repeat: no-repeat;
@@ -220,7 +221,7 @@ h6{
 }
 
 h4{
-    bottom: 470px;
+    top: -200px;
     padding-left: 22px;
     position: absolute;
     width: 185px;
