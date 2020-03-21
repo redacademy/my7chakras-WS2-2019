@@ -84,6 +84,16 @@
         @include spandtb{
             display: none;
         }
+        // &:hover{
+        //     li{
+        //     p{
+        //         &:after{
+        //             transform: rotate(270deg);
+        //             transition: all .5s;             
+        //         }
+        //     }
+        // }
+        // }
     }
     &__sort li {
         list-style: none;
