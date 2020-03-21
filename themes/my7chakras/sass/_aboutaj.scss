@@ -1,7 +1,7 @@
 .aboutaj{
 
 
-    .aj-hidesktop {
+    .aj-hidedesktop {
         display: none;
 
         @include pcandtb{
@@ -40,14 +40,13 @@
         object-fit: contain;
         position: absolute;
         right: 0;
-        top: -217px;
+        top:  -226px;
 
     @include pc{
     width: 290px;
     height: 339px;
-    position: absolute;
-    margin-top: -363px;
-    margin-left: 1128px;
+    margin-top: -137px;
+    margin-left: 444px;
     }
     @include tb{
     width: 290px;
