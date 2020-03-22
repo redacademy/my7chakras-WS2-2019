@@ -1,7 +1,7 @@
 .aboutaj{
 
 
-    .aj-hidedesktop {
+    .aj-hidesktop {
         display: none;
 
         @include pcandtb{
@@ -51,7 +51,7 @@
     @include tb{
     width: 290px;
     height: 339px;
-    margin-top: -363px;
+    top: -363px;
     margin-left: 444px;
     }
 }

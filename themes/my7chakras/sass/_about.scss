@@ -32,7 +32,7 @@
     @include tb{
     display: flex;
     flex-wrap: wrap;
-    width: 65%;
+    width: 60%;
     margin: auto;
     padding-top: 25px;
 
@@ -42,7 +42,7 @@
 
     display: flex;
     flex-wrap: wrap;
-    width: 85%;
+    width: 78%;
     margin: auto;
     padding-top: 25px;
 }
@@ -59,11 +59,11 @@ h1{
 
     @include tb{
         padding-left: 35px;
-        padding-top: 0px;
+        padding-top: 50px;
     }
 
     @include pc{
-        padding-left: 350px;
+        padding-left: 150px;
         padding-top: 80px;
     }
 
@@ -203,5 +203,11 @@ figcaption{
 }
 .eachvalue-wrap{
     margin: 20px;
+}
+.support-item{
+    display: flex;
+    @include spandtb{
+        flex-direction: column;
+    }
 }
 }
