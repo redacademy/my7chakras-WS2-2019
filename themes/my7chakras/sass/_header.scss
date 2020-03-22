@@ -8,7 +8,7 @@
 .site-header{
     width: 100%;
     margin: 0px;
-    padding: 0% 5%;
+    padding: 0% 2.5%;
     @include box-row;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -21,13 +21,19 @@
             border-bottom: solid;
             color: $purple;
     }
-
+    .logo-header:hover{
+        border-bottom: unset;
+    }
     .current-menu-item{
         @include pcandtb{
             border-bottom: solid;
         }
     }
 
+    .current-menu-item:hover{
+
+        border-bottom: unset;
+    }
     @include pcandtb{
         padding-bottom: unset;
     }
@@ -146,7 +152,7 @@
     @include pcandtb{
         @include tb{
             display: unset;
-            width: 80%;
+            width: 78%;
         }
         
         display: unset;
@@ -161,6 +167,7 @@
 
 fieldset{
     height: fit-content;
+    background-color: $white;
     label{
 
         height: fit-content;
