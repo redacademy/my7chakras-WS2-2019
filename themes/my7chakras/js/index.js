@@ -11,12 +11,15 @@ $(function () {
             $(this).children(':first').removeAttr('href');
         }
     });
+
+    
     // Sub menu animation
     if ($(window).width() < 980) {
-     
+
         $('.sub-menu-ul').on('click', function () {
             $(this).find('.sub-menu').slideToggle();
             $(this).toggleClass('close-icon');
+
         });
     }
     else {
@@ -24,34 +27,45 @@ $(function () {
             $(this).addClass('sub-menu-container');
             $(this).toggleClass('close-icon');
             $(this).find('.sub-menu').slideToggle();
-            $(this).find('.icon-menu').toggleClass('border');
+            $(this).find('.icon-menu').toggleClass('border-hover');
         });
+
+
+
     }
-    // Burge menu animations
-    $('.menu-toggle').on('click', function (event) {
-     
-        let menuBar = $('.main-manu-content');
-        menuBar.slideToggle()
-    });
-    $('.burger-icon').on('click', function (event) {
-     
-        let closeIcon = $('.close-icon');
-        closeIcon.toggleClass('hide');
-        let burgeIcon = $('.burger-icon');
-        burgeIcon.toggleClass('hide');
-    });
-    $('.close-icon').on('click', function (event) {
-     
-        let closeIcon = $('.close-icon');
-        closeIcon.toggleClass('hide');
-        let burgeIcon = $('.burger-icon');
-        burgeIcon.toggleClass('hide');
-    });
-    $('.search-toggle').on('click', function (event) {
-     
-        let searchBar = $('.search-bar');
-        searchBar.slideToggle()
-    });
+
+// BURGER MENU
+let button = $('.menu-toggle')
+
+button.click(function(event) {
+    let menuBar = $('.main-manu-content');
+  $('.burger-menu').toggleClass('fa-times');
+  $(".site-content").toggleClass('overlay-content');
+  menuBar.slideToggle()
+
+
+})
+
+
+
+  
+//   Search bar
+
+let buttonSearch = $('.search-toggle')
+buttonSearch.click(function() {
+  let menuBar = $('.search-bar');
+  menuBar.slideToggle()
+  $(".search-field").val("");
+  $(".search-field").focus();
+  $(menuBar).focusout(function(){
+    $(this).slideUp("fast");
+  });
+})
+
+
+
+
+
     // Show the correct form depending on the link
     $('#aj-button').addClass('change-color');
     $('.aj-text').hide();
@@ -84,3 +98,6 @@ $(function () {
 });
 
 });
+
+
+

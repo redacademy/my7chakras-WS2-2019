@@ -1,12 +1,32 @@
+.hfeed{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 999999!important;
 
+}
 .site-header{
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 0% 5%;
     @include box-row;
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 0.5%;
     align-items: center;
+    background-color: $white;
+
+
+    a:hover{
+            border-bottom: solid;
+            color: $purple;
+    }
+
+    .current-menu-item{
+        @include pcandtb{
+            border-bottom: solid;
+        }
+    }
 
     @include pcandtb{
         padding-bottom: unset;
@@ -28,7 +48,6 @@
 
    .menu-menu-1-container{
 
-    
 
         ul{
             @include box-column;
@@ -36,29 +55,49 @@
             margin: 0%;
             padding: 0%;
             align-items: center;
+            width: 100%;
+
+
+        
+
+
             .menu-item{
+                width: 100%;
+                @include pcandtb{
+                    width: auto;
+                    position: relative;
+                    @include tb{
+                    width: auto;
+                    }
+                }
                 a{
                 margin: 0 3% ;
-              
-                // height: 73px;
+                width: 100%;
                 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
                 align-items: center;
                 display: flex;
                 align-items: center;
                 letter-spacing: 0.15px;
                 padding: 3%;
-                height: fit-content;
+                height: 73px;
                 @include pcandtb{
                     @include reset; 
+                    width: fit-content;
                     box-shadow: unset;
+                    height: fit-content;
                 }
+
+                    
             }
             }
             @include pcandtb{
+                
                 @include box-row; 
             }
 
+
         }
+
     }
 
     .logo-header{
@@ -82,6 +121,8 @@
         border: none;
         height: auto;
         margin: 0 3%;
+        color: $text-color;
+        font-size: 24px;
         
         @include pcandtb{
             width: 15.9px;   
@@ -93,6 +134,7 @@
         }
       
     }
+    
 }
 
 .main-manu-content{
@@ -101,12 +143,17 @@
     width: 100%;
     height: fit-content;
     z-index: 999;
-
-
     @include pcandtb{
+        @include tb{
+            display: unset;
+            width: 80%;
+        }
+        
         display: unset;
         width: 80%;
+
     }
+
 }
 
 
@@ -122,6 +169,7 @@ fieldset{
 
 
 .sub-menu{
+
     li{
        
         a{
@@ -130,6 +178,10 @@ fieldset{
             box-shadow: unset!important;
             box-shadow:0px 2px 0px rgba(0, 0, 0, 0.16)!important;
             padding-left: 8%!important;
+            @include tb{
+
+                width: 140px!important;
+            }
 
             @include pcandtb{
                 @include reset;
@@ -137,10 +189,18 @@ fieldset{
                 border-radius: 0px !important;
                 height: fit-content !important;
                 padding: 10%!important;;
+                width: 140px!important;
+
             }
            
         }
 
+    }
+    @include tb{
+        position: absolute;
+        top: 73%;
+        width: 140px!important;
+        
     }
             @include pcandtb{
                 background-color: $white;
@@ -148,21 +208,30 @@ fieldset{
                 flex-direction: column!important;
                 position: absolute;
                 top: 73%;
-                width: fit-content;
-               
+                width: 140px!important;
+              
                 box-shadow:0px 0px 3px rgba(0, 0, 0, 0.16)!important;
+
             }
+
 
 }
 
 .sub-menu-container{
     @include pcandtb{
-        position: relative;
+        position: relative!important;
         height: 73px;
         display: flex;
         align-items: center;
-
+        
     }
+            @include tb{
+                position: relative!important;
+                height: 73px;
+                display: flex;
+                align-items: center;
+            }
+
 }
 
 .menu-item-has-children{
@@ -209,11 +278,7 @@ fieldset{
     }
 }
 
-.menu-item-object-page:hover{
-    
-        border-bottom: solid;
-    
-}
+
 
 
 .search-bar{
@@ -248,6 +313,10 @@ fieldset{
 }
 
 
-.border{
-    border-bottom: solid;
+.border-hover{
+    @include pcandtb{
+        border-bottom: solid;
+    }
 }
+
+
