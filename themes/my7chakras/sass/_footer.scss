@@ -169,6 +169,13 @@ font-family: $font-main !important;
     color: $white;
     border: unset !important;
     border-radius: 3px;
+    width: 90%;
+    margin: 3% auto !important;
+
+    @include pcandtb{
+        width: 70%;
+
+    }
 }
 
 

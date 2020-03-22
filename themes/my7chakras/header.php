@@ -15,9 +15,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<script src="https://kit.fontawesome.com/fa6c85a2f7.js" crossorigin="anonymous"></script>
 
 
 	<?php wp_head(); ?>
@@ -43,8 +42,8 @@
 
 
 				<button class="menu-toggle">
-					<img class="burger-icon" src="<?php echo get_template_directory_uri(); ?>/assets/logo/burger.svg" alt="logo">
-					<img class="close-icon hide" src="<?php echo get_template_directory_uri(); ?>/assets/logo/close-icon.svg" alt="logo">
+					<i class="burger-menu fas fa-bars"></i>
+
 				</button>
 
 
@@ -55,6 +54,7 @@
 
 				<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 				<div class="clear"></div>
+				
 	</div>
 
 				
@@ -72,6 +72,7 @@
 	<div class="search-bar hide">
 		<?php get_search_form(); ?>
 	</div>
+
 
 	<div id="content" class="site-content">
 
