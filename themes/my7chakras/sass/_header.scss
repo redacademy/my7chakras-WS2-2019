@@ -8,7 +8,7 @@
 .site-header{
     width: 100%;
     margin: 0px;
-    padding: 0% 5%;
+    padding: 0% 2.5%;
     @include box-row;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -21,13 +21,19 @@
             border-bottom: solid;
             color: $purple;
     }
-
+    .logo-header:hover{
+        border-bottom: unset;
+    }
     .current-menu-item{
         @include pcandtb{
             border-bottom: solid;
         }
     }
 
+    .current-menu-item:hover{
+
+        border-bottom: unset;
+    }
     @include pcandtb{
         padding-bottom: unset;
     }
@@ -146,7 +152,7 @@
     @include pcandtb{
         @include tb{
             display: unset;
-            width: 80%;
+            width: 78%;
         }
         
         display: unset;
@@ -161,6 +167,7 @@
 
 fieldset{
     height: fit-content;
+    background-color: $white;
     label{
 
         height: fit-content;
@@ -243,6 +250,10 @@ fieldset{
         @include pcandtb{
 
             width: fit-content;
+
+            i{
+                margin-left: 10px;
+            }
         }
         
     }
@@ -253,27 +264,27 @@ fieldset{
             content: "+";
             color: $purple;
             @include pcandtb{
-                transition: 1s all ;
-                margin-left: 20%;
-                font-size: 1.2rem;
-                color: rgb(80, 80, 80);
-                content: "<";
-                font-weight: 300;
-                transform: rotate(270deg);
+                content: unset;
             } 
     }
 }
 
 .close-icon{
+    i{
+        margin-left: 10px;
+        transition: all 1s;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+
+    }
     .icon-menu:after{
-        
         font-size: 2.5rem;
         content: "-";
         @include pcandtb{
-            font-size: 1.2rem;
-            transition: 1s all;
-            content: "<";
-            transform: rotate(90deg);
+            content: unset;
         } 
     }
 }

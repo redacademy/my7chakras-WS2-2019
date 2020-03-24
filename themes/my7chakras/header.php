@@ -26,6 +26,8 @@
 	<div id="page" class="hfeed site">
 		<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html('Skip to content'); ?></a>
 
+
+		<div class="site-header">
 		<header id="masthead" class="site-header" role="banner">
 
 			<a class="logo-header" href="/">
@@ -55,7 +57,10 @@
 				<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 				<div class="clear"></div>
 				
-	</div>
+			</div>
+					<div class="search-bar hide">
+						<?php get_search_form(); ?>
+					</div>
 
 				
 				<a href="#masthead">
@@ -66,12 +71,13 @@
 					</button>
 				</a>
 
-	</header>
+			
+				
+			</header>
 
 
-	<div class="search-bar hide">
-		<?php get_search_form(); ?>
 	</div>
+
 
 
 	<div id="content" class="site-content">
