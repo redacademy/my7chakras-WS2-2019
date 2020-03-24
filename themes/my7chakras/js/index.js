@@ -14,7 +14,7 @@ $(function () {
 
     
     // Sub menu animation
-    if ($(window).width() < 980) {
+    if ($(window).width() < 768) {
 
         $('.sub-menu-ul').on('click', function () {
             $(this).find('.sub-menu').slideToggle();
@@ -23,6 +23,7 @@ $(function () {
         });
     }
     else {
+        $('.sub-menu-ul').find( ".icon-menu" ).append( '<i class="fas fa-chevron-down"></i>' );
         $('.sub-menu-ul').hover(function () {
             $(this).addClass('sub-menu-container');
             $(this).toggleClass('close-icon');
