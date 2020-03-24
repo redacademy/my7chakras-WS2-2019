@@ -182,9 +182,21 @@
         
         .pagination a.prev {
             margin-right: 16px;
+            @include sp{
+                margin-right: 0;
+            }
         }
         .pagination a.next {
             margin-left: 16px;
+            @include sp{
+                margin-left: 0;
+            }
+        }
+
+        .pagination a.last, .pagination a.first{
+            @include sp{
+                display: none;
+            }
         }
 
         .pagination a.prev, .pagination a.next, .pagination a.last, .pagination a.first{
