@@ -17,16 +17,16 @@ get_header(); ?>
             </div>
 
             <div class="episodes__categories">
-                <a href="" class="episodes__category">
+                <a href="<?php echo home_url('/category/personal-growth-purpose-career/'); ?>" class="episodes__category">
                     <p>Personal Growth,<br>Purpose & Career</p>
                 </a>
-                <a href="" class="episodes__category">
+                <a href="<?php echo home_url('category/health-spirituality/'); ?>" class="episodes__category">
                     <p>Health & <br>Spirituality</p>
                 </a>
-                <a href="" class="episodes__category">
+                <a href="<?php echo home_url('category/love-relationships/'); ?>" class="episodes__category">
                     <p>Love & <br>Relationships</p>
                 </a>
-                <a href="" class="episodes__category">
+                <a href="<?php echo home_url('category/energy-medicine-chakras-healing/'); ?>" class="episodes__category">
                     <p>Energy Medicine, <br>Chakras & Healing</p>
                 </a>
             </div>
