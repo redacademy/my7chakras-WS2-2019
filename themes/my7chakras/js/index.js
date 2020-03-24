@@ -43,7 +43,7 @@ button.click(function(event) {
   $('.burger-menu').toggleClass('fa-times');
   $(".site-content").toggleClass('overlay-content');
   menuBar.slideToggle()
-
+  $('.overlay-body').slideToggle();
 
 })
 
@@ -58,7 +58,11 @@ buttonSearch.click(function() {
   menuBar.slideToggle()
   $(".search-field").val("");
   $(".search-field").focus();
+  $('.overlay-body').slideToggle();
+
   $(menuBar).focusout(function(){
+  $('.overlay-body').hide();
+
     $(this).slideUp("fast");
   });
 })

@@ -75,6 +75,8 @@
 				
 			</header>
 
+			<div class="overlay-body">
+			</div>
 
 	</div>
 
