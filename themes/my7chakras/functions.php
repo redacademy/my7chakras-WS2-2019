@@ -176,10 +176,10 @@ function pagination($pages, $paged, $range = 2, $show_only = false)
 	$pages = (int) $pages;
 	$paged = $paged ?: 1;
 
-	$text_first   = "« First";
-	$text_before  = "‹ Before";
-	$text_next    = "Next ›";
-	$text_last    = "Last »";
+	$text_first   = "First";
+	$text_before  = "Before";
+	$text_next    = "Next";
+	$text_last    = "Last";
 
 	if ($show_only && $pages === 1) {
 

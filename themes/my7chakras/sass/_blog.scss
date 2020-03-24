@@ -152,24 +152,24 @@
             justify-content: center;
             margin: 40px 0;
             position: relative;
-            font-size: 13px;
+            font-size: 17px;
         }
         
         .pagination span, .pagination a {
             display: block;
             width: auto;
             margin: 4px;
-            padding: 8px 8px 6px;
+            padding: 9px 7px 5px;
             border: 1px solid $purple;
             background-color: #fff;
             text-decoration: none;
             text-align: center;
-            line-height: 16px;
+            line-height: 20px;
             color: $purple;
         }
         
         .pagination .pager{
-            width: 32px;
+            width: 37px;
             border-radius: 50%;
         }
         
@@ -182,9 +182,28 @@
         
         .pagination a.prev {
             margin-right: 16px;
+            @include sp{
+                margin-right: 0;
+            }
         }
         .pagination a.next {
             margin-left: 16px;
+            @include sp{
+                margin-left: 0;
+            }
+        }
+
+        .pagination a.last, .pagination a.first{
+            @include sp{
+                display: none;
+            }
+        }
+
+        .pagination a.prev, .pagination a.next, .pagination a.last, .pagination a.first{
+            border-radius: 10px;
+            background: $purple;
+            color: #ffffff;
+            padding: 10px 15px 5px;
         }
         
         .pagination span.page_num {
