@@ -60,6 +60,7 @@ buttonSearch.click(function() {
   $(".search-field").focus();
   $('.overlay-body').slideToggle();
 
+
   $(menuBar).focusout(function(){
   $('.overlay-body').hide();
 
@@ -69,6 +70,10 @@ buttonSearch.click(function() {
 
 
 
+$('#to-button').click(function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
 
 
     // Show the correct form depending on the link

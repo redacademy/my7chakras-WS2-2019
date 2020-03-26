@@ -39,6 +39,11 @@
 			<p>Privacy Policy</p>
 		</div>
 
+	
+					<button id="to-button" class="sticky-button">
+						<img  src= "<?php echo get_template_directory_uri();?>/assets/logo/slide-button.svg" alt="logo">
+					</button>
+			
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->

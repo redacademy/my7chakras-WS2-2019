@@ -307,18 +307,6 @@ fieldset{
 }
 
 
-.sticky-button{
-    @include reset;
-    position: fixed;
-  background: none;
-  right: 5%;
-  bottom: 10%;
-  border: none;
-  z-index: 999;
- @include pcandtb{
-     display: none;
- }
-}
 
 #masthead{
     outline: none;
@@ -339,4 +327,18 @@ fieldset{
     width: 100%;
     opacity: 0.6;
     height: 100vh;
+}
+
+
+.sticky-button{
+    @include reset;
+    position: fixed;
+  background: none;
+  right: 5%;
+  bottom: 10%;
+  border: none;
+  z-index: 999;
+ @include pcandtb{
+     display: none;
+ }
 }
