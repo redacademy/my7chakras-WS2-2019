@@ -26,7 +26,6 @@
 	<div id="page" class="hfeed site">
 		<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html('Skip to content'); ?></a>
 
-
 		<div class="site-header">
 		<header id="masthead" class="site-header" role="banner">
 
@@ -34,18 +33,17 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/logo/logo.svg" alt="logo">
 			</a>
 
-
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="search-toggle" aria-controls="primary-menu" aria-expanded="false">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/logo/search.svg" alt="logo">
 				</button>
-
-
-
+				
+				<button class="search-toggle st-close hide" aria-controls="primary-menu" aria-expanded="false">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/logo/search.svg" alt="logo">
+				</button>
 
 				<button class="menu-toggle">
 					<i class="burger-menu fas fa-bars"></i>
-
 				</button>
 
 
@@ -62,17 +60,11 @@
 						<?php get_search_form(); ?>
 					</div>
 
-				
-				<a href="#masthead">
 
-					<button class="sticky-button">
-						<img  src= "<?php echo get_template_directory_uri();?>/assets/logo/slide-button.svg" alt="logo">
-						
-					</button>
-				</a>
 
-			
 				
+
+
 			</header>
 
 			<div class="overlay-body">
@@ -81,6 +73,4 @@
 	</div>
 
 
-
-	<div id="content" class="site-content">
-
+	</div>
