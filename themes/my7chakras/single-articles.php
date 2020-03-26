@@ -68,7 +68,7 @@ get_header(); ?>
                                     <?php endif; ?>
                                     <div>
                                         <p class="page-navTitle">Previous Episode</p>
-                                        <p class="page-navContent"><?php echo get_the_title($next_post->ID); ?></p>
+                                        <p class="page-navContent"><?php echo get_the_title($prev_post->ID); ?></p>
                                     </div>
                                 </a>
                             <?php endif; ?>
