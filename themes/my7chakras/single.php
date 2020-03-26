@@ -130,11 +130,11 @@ get_header(); ?>
 						<div class="episode__btnApp">
 							<h5>Listen On:</h5>
 							<div>
-								<a href="">
+								<a href="https://podcasts.apple.com/us/podcast/id1045873679">
 									<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/podcast.png" alt="">
 									<p>Apple<br>Podcasts</p>
 								</a>
-								<a href="">
+								<a href="https://open.spotify.com/show/6mDwmMwh0r9zQYpTc1nqa5">
 									<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/episodes/spotify.png" alt="">
 									<p>Spotify</p>
 								</a>
